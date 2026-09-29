@@ -325,18 +325,6 @@ img {
   border-bottom: 1px solid rgba(1, 27, 64, 0.06);
 }
 
-.header-wrapper.scrolled .top-trust-bar {
-  margin-top: -38px;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.header-wrapper.scrolled .main-navbar {
-  padding: 8px 0;
-  background-color: rgba(255, 255, 255, 0.96);
-  backdrop-filter: blur(12px);
-  box-shadow: 0 10px 30px rgba(1, 27, 64, 0.1);
-}
 
 /* Logo Design */
 .navbar-brand {
@@ -357,10 +345,6 @@ img {
 
 .header-logo-img:hover {
   transform: scale(1.03);
-}
-
-.header-wrapper.scrolled .header-logo-img {
-  height: 52px;
 }
 
 .footer-logo-box {
