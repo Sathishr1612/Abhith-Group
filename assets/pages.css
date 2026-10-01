@@ -3698,3 +3698,50 @@ a.corporate-service-card {
     padding: 24px 0 0;
   }
 }
+
+/* ==========================================================================
+   MOBILE SPACING FIXES – image blocks followed by text
+   ========================================================================== */
+@media (max-width: 991.98px) {
+  /* Home "Proven Impact": wrapper kept a 420px min-height while the image is
+     capped at 360px, leaving an empty band under the photo */
+  .stats-image-wrapper {
+    min-height: 0;
+    height: auto;
+  }
+
+  .stats-guard-img {
+    min-height: 0;
+    height: 300px;
+    max-height: none;
+    border-radius: 14px;
+  }
+
+  .stats-image-overlay {
+    border-radius: 14px;
+  }
+
+  /* About intro: the "2019" badge hangs 20px below the photo – give it room */
+  .about-image-wrapper {
+    margin-bottom: 36px;
+  }
+
+  .about-img {
+    height: 400px;
+  }
+
+  /* About journey: inset photo overlaps the bottom edge – more air before the heading */
+  .pg-jstory > [class*="col-"] + [class*="col-"] {
+    margin-top: 28px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .stats-guard-img {
+    height: 240px;
+  }
+
+  .about-img {
+    height: 340px;
+  }
+}
