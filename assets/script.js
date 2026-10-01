@@ -19,21 +19,140 @@ document.addEventListener('DOMContentLoaded', () => {
   handleScroll(); // Trigger initial state
 
   // 2. Scroll Reveal Animations via IntersectionObserver
-  const revealElements = document.querySelectorAll('.reveal-up');
+  //    Hand-placed .reveal-up classes are kept; everything else inside page
+  //    sections is tagged automatically so every page animates the same way:
+  //    two-column rows slide in from their own side, card rows stagger upward,
+  //    headings and remaining blocks fade up. Each element animates once.
+  const REVEAL_CLASSES = ['reveal-up', 'reveal-left', 'reveal-right', 'reveal-fade'];
+  const REVEAL_SELECTOR = REVEAL_CLASSES.map(c => `.${c}`).join(',');
+  const SKIP_SELECTOR = 'header, footer, .pg-hero, .hero-section, .pg-gallery-grid, #testiCarouselTrack, .carousel, .modal';
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  const revealObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('active');
-        observer.unobserve(entry.target);
-      }
+  const isTagged = el => el.matches(REVEAL_SELECTOR);
+  const insideTagged = el => !!el.parentElement?.closest(REVEAL_SELECTOR);
+  const hasTaggedChild = el => !!el.querySelector(REVEAL_SELECTOR);
+  const isColumn = el => /(^|\s)col(-[\w-]+)?(\s|$)/.test(el.className);
+  const setDelay = (el, seconds) => {
+    if (seconds > 0 && !el.style.getPropertyValue('--stagger-delay')) {
+      el.style.setProperty('--stagger-delay', `${seconds.toFixed(2)}s`);
+    }
+  };
+
+  const autoTagReveals = () => {
+    const sections = Array.from(document.querySelectorAll('section')).filter(s => !s.closest(SKIP_SELECTOR));
+
+    // a) Rows of columns — measure everything first, then write (no layout thrash)
+    const plans = [];
+    sections.forEach(section => {
+      section.querySelectorAll('.row').forEach(row => {
+        if (row.closest(SKIP_SELECTOR) || insideTagged(row)) return;
+        const cols = Array.from(row.children).filter(isColumn);
+        if (!cols.length) return;
+        const rowRect = row.getBoundingClientRect();
+        const rects = cols.map(c => c.getBoundingClientRect());
+        const sideBySide = cols.length === 2 &&
+          Math.abs(rects[0].top - rects[1].top) < 60 &&
+          rects.every(r => r.width < rowRect.width * 0.8);
+        // Swipeable rows (e.g. service cards on mobile) reveal as one block,
+        // otherwise off-screen cards would stay blank until swiped in.
+        const scrollsSideways = /(auto|scroll)/.test(getComputedStyle(row).overflowX);
+        plans.push({ row, cols, rects, rowRect, sideBySide, scrollsSideways });
+      });
     });
-  }, {
-    threshold: 0.15,
-    rootMargin: '0px 0px -40px 0px'
-  });
 
-  revealElements.forEach(el => revealObserver.observe(el));
+    plans.forEach(({ row, cols, rects, rowRect, sideBySide, scrollsSideways }) => {
+      if (insideTagged(row)) return; // a parent column was tagged after measuring
+      if (scrollsSideways) {
+        row.querySelectorAll(REVEAL_SELECTOR).forEach(el => el.classList.remove(...REVEAL_CLASSES));
+        row.classList.add('reveal-up');
+        return;
+      }
+      const rowWasTagged = isTagged(row);
+      if (rowWasTagged) row.classList.remove(...REVEAL_CLASSES); // hand the reveal to its columns
+
+      let lineTop = null;
+      let indexInLine = 0;
+      cols.forEach((col, i) => {
+        // Columns that manage their own inner reveals are left alone
+        if (hasTaggedChild(col)) return;
+
+        if (sideBySide) {
+          const centre = rects[i].left + rects[i].width / 2;
+          const fromLeft = centre < rowRect.left + rowRect.width / 2;
+          col.classList.remove('reveal-up');
+          col.classList.add(fromLeft ? 'reveal-left' : 'reveal-right');
+          setDelay(col, fromLeft ? 0 : 0.12);
+          return;
+        }
+
+        if (!isTagged(col)) col.classList.add('reveal-up');
+        // Stagger cards that sit on the same visual line
+        if (lineTop === null || Math.abs(rects[i].top - lineTop) > 20) {
+          lineTop = rects[i].top;
+          indexInLine = 0;
+        }
+        if (cols.length > 1) setDelay(col, Math.min(indexInLine, 5) * 0.09);
+        indexInLine += 1;
+      });
+    });
+
+    sections.forEach(section => {
+      // b) Section labels, headings and intro text
+      const headingCount = new Map();
+      section.querySelectorAll('.eyebrow-tag, .section-title, .section-subtitle, h2, .pg-block-title').forEach(el => {
+        if (el.closest(SKIP_SELECTOR) || isTagged(el) || insideTagged(el)) return;
+        const n = headingCount.get(el.parentElement) || 0;
+        headingCount.set(el.parentElement, n + 1);
+        el.classList.add('reveal-up');
+        setDelay(el, Math.min(n, 3) * 0.08);
+      });
+
+      // c) Any other top-level block in the section's container
+      section.querySelectorAll(':scope > .container > *, :scope > .container-fluid > *, :scope > div > .container > *, :scope > div > .container-fluid > *').forEach(el => {
+        if (el.closest(SKIP_SELECTOR) || el.matches('.row, script, style') || isTagged(el) || insideTagged(el) || hasTaggedChild(el)) return;
+        el.classList.add('reveal-up');
+      });
+    });
+  };
+
+  if (!reduceMotion) autoTagReveals();
+
+  const revealElements = document.querySelectorAll(REVEAL_SELECTOR);
+
+  // Once the transition is over, drop the reveal classes so the element's own
+  // hover transforms and transitions work untouched.
+  const finishReveal = (el, hadActive) => {
+    const delay = parseFloat(getComputedStyle(el).transitionDelay) || 0;
+    setTimeout(() => {
+      el.classList.remove(...REVEAL_CLASSES);
+      if (!hadActive) el.classList.remove('active');
+      el.style.removeProperty('--stagger-delay');
+      delete el.dataset.revealHadActive;
+    }, (delay + 1.1) * 1000);
+  };
+
+  if (reduceMotion || !('IntersectionObserver' in window)) {
+    revealElements.forEach(el => el.classList.add('active'));
+  } else {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        const hadActive = el.dataset.revealHadActive === 'true';
+        el.classList.add('active');
+        observer.unobserve(el);
+        finishReveal(el, hadActive);
+      });
+    }, {
+      threshold: 0,
+      rootMargin: '0px 0px -8% 0px'
+    });
+
+    revealElements.forEach(el => {
+      el.dataset.revealHadActive = el.classList.contains('active');
+      revealObserver.observe(el);
+    });
+  }
 
   // 3. Number Counter Animation for Statistics
   const statNumbers = document.querySelectorAll('.counter-value');

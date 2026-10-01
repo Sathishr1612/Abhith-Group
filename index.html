@@ -8,6 +8,13 @@
   <meta name="description"
     content="Abhith Manpower Services delivers ISO 9001:2015 certified, PSARA licensed corporate security, facility management, and industrial manpower solutions across Northeast & Northern India.">
 
+  <!-- Favicon / site icon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/branding/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/branding/favicon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/images/branding/favicon/android-chrome-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/branding/favicon/apple-touch-icon.png">
+  <meta name="theme-color" content="#011B40">
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,217 +29,18 @@
 
   <!-- Custom Style System -->
   <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/pages.css">
+
+  <!-- Shared Header / Footer -->
+  <script src="assets/layout.js"></script>
 </head>
 
-<body>
+<body data-page="home">
 
   <!-- ==========================================================================
-       HEADER & NAVIGATION SYSTEM
+       HEADER & NAVIGATION SYSTEM (shared – see assets/layout.js)
        ========================================================================== -->
-  <header class="header-wrapper" id="headerWrapper">
-    <!-- Top slim navy trust strip -->
-    <div class="top-trust-bar">
-      <div class="container-fluid px-lg-5">
-        <div class="d-flex justify-content-between align-items-center">
-          <div class="d-flex align-items-center gap-4">
-            <span class="trust-badge-pill">
-              <i class="bi bi-shield-check"></i> ISO 9001:2015 / PSARA Licensed
-            </span>
-            <span class="d-none d-md-inline text-light-muted">|</span>
-            <span class="d-none d-md-inline">
-              <i class="bi bi-headset me-1 text-gold"></i> 24×7 Operational Desk: <strong>+91 98765 43210</strong>
-            </span>
-          </div>
-          <div class="d-flex align-items-center gap-3 gap-lg-4">
-            <span class="d-none d-lg-inline">
-              <i class="bi bi-geo-alt me-1 text-gold"></i> Hubs: Guwahati (HQ) | Noida | Jaipur
-            </span>
-            <a href="mailto:info@abhithgroup.com" class="text-white text-decoration-none d-none d-sm-inline">
-              <i class="bi bi-envelope me-1 text-gold"></i> info@abhithgroup.com
-            </a>
-            <span class="d-none d-sm-inline text-light-muted opacity-50">|</span>
-            <div class="d-flex align-items-center gap-3 fs-5">
-              <a href="#" class="text-decoration-none" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-              <a href="#" class="text-decoration-none" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-              <a href="#" class="text-decoration-none" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-              <!-- <a href="#" class="text-decoration-none" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a> -->
-              <a href="#" class="text-decoration-none" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Main White Navbar -->
-    <nav class="main-navbar navbar navbar-expand-lg">
-      <div class="container-fluid px-lg-5">
-
-        <!-- Brand Logo Left -->
-        <a class="navbar-brand me-4" href="#">
-          <img src="images/logo-abhith.png" alt="Abhith Manpower Services Pvt. Ltd." class="header-logo-img">
-        </a>
-
-        <!-- Mobile Toggle Button -->
-        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
-          data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Navbar Navigation Links -->
-        <div class="collapse navbar-collapse" id="navbarContent">
-          <ul class="navbar-menu navbar-nav mx-auto mb-2 mb-lg-0 align-items-lg-center">
-            <li class="nav-item">
-              <a class="nav-link-custom nav-link active" href="#hero">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link-custom nav-link" href="#statsSection">About Us</a>
-            </li>
-
-            <!-- OUR SERVICES MEGA DROPDOWN -->
-            <li class="nav-item dropdown dropdown-mega">
-              <a class="nav-link-custom nav-link dropdown-toggle" href="#services" id="servicesDropdown" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                Our Services <i class="bi bi-chevron-down ms-1 small text-gold"></i>
-              </a>
-              <div class="dropdown-menu mega-menu-content shadow-lg" aria-labelledby="servicesDropdown">
-
-                <!-- Main 2-Column Content Area -->
-                <div class="mega-menu-inner">
-                  <div class="row g-4">
-
-                    <!-- COLUMN 1: SECURITY MANPOWER SERVICES -->
-                    <div class="col-lg-6 mega-menu-col border-end-lg">
-                      <div class="mega-menu-col-title">
-                        <i class="bi bi-shield-lock-fill"></i>
-                        <span>SECURITY MANPOWER SERVICES</span>
-                      </div>
-                      <ul class="mega-menu-list">
-                        <li>
-                          <a href="#services" class="mega-menu-service-link">
-                            <span class="service-icon-box">
-                              <i class="bi bi-shield-shaded service-icon"></i>
-                              <span>PSO – Armed</span>
-                            </span>
-                            <i class="bi bi-arrow-right item-arrow"></i>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#services" class="mega-menu-service-link">
-                            <span class="service-icon-box">
-                              <i class="bi bi-person-badge-fill service-icon"></i>
-                              <span>Bouncer & Unarmed Bodyguard</span>
-                            </span>
-                            <i class="bi bi-arrow-right item-arrow"></i>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#services" class="mega-menu-service-link">
-                            <span class="service-icon-box">
-                              <i class="bi bi-person-vcard-fill service-icon"></i>
-                              <span>Security Guards – Male & Female</span>
-                            </span>
-                            <i class="bi bi-arrow-right item-arrow"></i>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <!-- COLUMN 2: FACILITY MANAGEMENT -->
-                    <div class="col-lg-6 mega-menu-col">
-                      <div class="mega-menu-col-title">
-                        <i class="bi bi-building-gear"></i>
-                        <span>FACILITY MANAGEMENT</span>
-                      </div>
-                      <ul class="mega-menu-list">
-                        <li>
-                          <a href="#services" class="mega-menu-service-link">
-                            <span class="service-icon-box">
-                              <i class="bi bi-building-fill-gear service-icon"></i>
-                              <span>Building Manager</span>
-                            </span>
-                            <i class="bi bi-arrow-right item-arrow"></i>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#services" class="mega-menu-service-link">
-                            <span class="service-icon-box">
-                              <i class="bi bi-houses-fill service-icon"></i>
-                              <span>Corporate Housekeepers</span>
-                            </span>
-                            <i class="bi bi-arrow-right item-arrow"></i>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#services" class="mega-menu-service-link">
-                            <span class="service-icon-box">
-                              <i class="bi bi-car-front-fill service-icon"></i>
-                              <span>Professional Drivers</span>
-                            </span>
-                            <i class="bi bi-arrow-right item-arrow"></i>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#services" class="mega-menu-service-link">
-                            <span class="service-icon-box">
-                              <i class="bi bi-stars service-icon"></i>
-                              <span>Janitorial Services</span>
-                            </span>
-                            <i class="bi bi-arrow-right item-arrow"></i>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#services" class="mega-menu-service-link">
-                            <span class="service-icon-box">
-                              <i class="bi bi-tools service-icon"></i>
-                              <span>Facility Management</span>
-                            </span>
-                            <i class="bi bi-arrow-right item-arrow"></i>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-
-                  </div>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link-custom nav-link" href="#clients">Industries & Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link-custom nav-link" href="#presence">Geographical Presence</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link-custom nav-link" href="#services">Gallery</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link-custom nav-link" href="#testimonials">Testimonials</a>
-            </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link-custom nav-link" href="#faq">FAQ</a>
-            </li> -->
-            <li class="nav-item">
-              <a class="nav-link-custom nav-link" href="#footer">Contact Us</a>
-            </li>
-          </ul>
-
-          <!-- Right Action CTA -->
-          <div class="d-flex align-items-center gap-3 ms-lg-3 mt-3 mt-lg-0">
-            <button class="btn-custom btn-custom-gold w-100 w-lg-auto" onclick="window.location.href='#'">
-              REQUEST A QUOTE
-              <svg class="btn-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </button>
-          </div>
-        </div>
-
-      </div>
-    </nav>
-  </header>
+  <script>AbhithLayout.render('header');</script>
 
 
   <!-- ==========================================================================
@@ -247,27 +55,27 @@
         <!-- Slide 1 -->
         <div class="carousel-item active">
           <div class="hero-slide-bg hero-slide-1"
-            style="background-image: url('images/manpower/man-power-abhith.png');">
+            style="background-image: url('assets/images/security/abhith-security-manpower-services.png');">
           </div>
           <div class="hero-overlay"></div>
         </div>
         <!-- Slide 2 -->
         <div class="carousel-item">
           <div class="hero-slide-bg hero-slide-2"
-            style="background-image: url('images/manpower/security-guard-standing-abhith.png');">
+            style="background-image: url('assets/images/security/abhith-security-guards-baton-drill.png');">
           </div>
           <div class="hero-overlay"></div>
         </div>
         <!-- Slide 3 -->
         <div class="carousel-item">
           <div class="hero-slide-bg hero-slide-3"
-            style="background-image: url('images/abhith-new/security-guard-abhith-1.webp');">
+            style="background-image: url('assets/images/security/abhith-bouncers-team-lineup-profile.webp');">
           </div>
           <div class="hero-overlay"></div>
         </div>
         <!-- Slide 4 -->
         <div class="carousel-item">
-          <div class="hero-slide-bg hero-slide-4" style="background-image: url('images/manpower/guard.jpg');">
+          <div class="hero-slide-bg hero-slide-4" style="background-image: url('assets/images/security/abhith-security-guards-team-lobby.jpg');">
           </div>
           <div class="hero-overlay"></div>
         </div>
@@ -294,7 +102,7 @@
 
           <div class="d-flex flex-wrap align-items-center gap-3 mb-4">
 
-            <a href="#contact" class="btn-custom btn-custom-gold">
+            <a href="contact.html#enquiry" class="btn-custom btn-custom-gold">
               Request a Quote
               <svg class="btn-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                 <path d="M5 12h14M12 5l7 7-7 7" />
@@ -393,9 +201,9 @@
 
           <!-- Card 01: PSO -->
           <div class="col-lg-4 col-md-6 reveal-up" style="--stagger-delay: 0.1s;">
-            <div class="corporate-service-card" onclick="window.location.href='#'">
+            <div class="corporate-service-card" onclick="window.location.href='pso-armed.html'">
               <div class="card-img-wrapper">
-                <img src="images/PSO armed_unarmed/pso_armed.png" alt="PSO – Armed & Unarmed Security Officer"
+                <img src="assets/images/security/abhith-pso-armed.png" alt="PSO – Armed & Unarmed Security Officer"
                   class="service-img" loading="lazy">
                 <div class="card-overlay"></div>
                 <span class="card-accent-pill">ARMED & UNARMED</span>
@@ -409,7 +217,7 @@
                   </p>
                 </div>
                 <div class="card-footer-action">
-                  <button class="service-read-more-btn" type="button" onclick="window.location.href='#'">
+                  <button class="service-read-more-btn" type="button" onclick="window.location.href='pso-armed.html'">
                     Read More <i class="bi bi-arrow-up-right-circle-fill"></i>
                   </button>
                 </div>
@@ -419,9 +227,9 @@
 
           <!-- Card 02: Bouncers -->
           <div class="col-lg-4 col-md-6 reveal-up" style="--stagger-delay: 0.2s;">
-            <div class="corporate-service-card" onclick="window.location.href='#'">
+            <div class="corporate-service-card" onclick="window.location.href='bouncer-unarmed-bodyguard.html'">
               <div class="card-img-wrapper">
-                <img src="images/Bouncers/bouncer_male.png" alt="Bouncer & Unarmed Bodyguard" class="service-img"
+                <img src="assets/images/security/abhith-male-bouncer.png" alt="Bouncer & Unarmed Bodyguard" class="service-img"
                   loading="lazy">
                 <div class="card-overlay"></div>
                 <span class="card-accent-pill">VIP PROTECTION</span>
@@ -435,7 +243,7 @@
                   </p>
                 </div>
                 <div class="card-footer-action">
-                  <button class="service-read-more-btn" type="button" onclick="window.location.href='#'">
+                  <button class="service-read-more-btn" type="button" onclick="window.location.href='bouncer-unarmed-bodyguard.html'">
                     Read More <i class="bi bi-arrow-up-right-circle-fill"></i>
                   </button>
                 </div>
@@ -445,9 +253,9 @@
 
           <!-- Card 03: Security Guards -->
           <div class="col-lg-4 col-md-6 reveal-up" style="--stagger-delay: 0.3s;">
-            <div class="corporate-service-card" onclick="window.location.href='#'">
+            <div class="corporate-service-card" onclick="window.location.href='security-guards.html'">
               <div class="card-img-wrapper">
-                <img src="images/security guards for brochure/1.png" alt="Security Guards – Male & Female"
+                <img src="assets/images/security/abhith-security-guard-with-radio-and-baton.png" alt="Security Guards – Male & Female"
                   class="service-img" loading="lazy">
                 <div class="card-overlay"></div>
                 <span class="card-accent-pill">STATIC & PATROL</span>
@@ -461,7 +269,7 @@
                   </p>
                 </div>
                 <div class="card-footer-action">
-                  <button class="service-read-more-btn" type="button" onclick="window.location.href='#'">
+                  <button class="service-read-more-btn" type="button" onclick="window.location.href='security-guards.html'">
                     Read More <i class="bi bi-arrow-up-right-circle-fill"></i>
                   </button>
                 </div>
@@ -491,9 +299,9 @@
 
           <!-- Card 04: Building Manager -->
           <div class="col-lg-3 col-md-6 col-sm-6 reveal-up" style="--stagger-delay: 0.1s;">
-            <div class="corporate-service-card" onclick="window.location.href='#'">
+            <div class="corporate-service-card" onclick="window.location.href='building-manager.html'">
               <div class="card-img-wrapper">
-                <img src="images/building manager/building manager.png" alt="Building Manager" class="service-img"
+                <img src="assets/images/facility-management/abhith-building-manager.png" alt="Building Manager" class="service-img"
                   loading="lazy">
                 <div class="card-overlay"></div>
                 <span class="card-accent-pill">FACILITY ADMIN</span>
@@ -507,7 +315,7 @@
                   </p>
                 </div>
                 <div class="card-footer-action">
-                  <button class="service-read-more-btn" type="button" onclick="window.location.href='#'">
+                  <button class="service-read-more-btn" type="button" onclick="window.location.href='building-manager.html'">
                     Read More <i class="bi bi-arrow-up-right-circle-fill"></i>
                   </button>
                 </div>
@@ -517,9 +325,9 @@
 
           <!-- Card 05: Housekeepers -->
           <div class="col-lg-3 col-md-6 col-sm-6 reveal-up" style="--stagger-delay: 0.2s;">
-            <div class="corporate-service-card" onclick="window.location.href='#'">
+            <div class="corporate-service-card" onclick="window.location.href='corporate-housekeepers.html'">
               <div class="card-img-wrapper">
-                <img src="images/corporate housekeepers/housekeeper female.png" alt="Corporate Housekeepers"
+                <img src="assets/images/facility-management/abhith-corporate-housekeeper-female.png" alt="Corporate Housekeepers"
                   class="service-img" loading="lazy">
                 <div class="card-overlay"></div>
                 <span class="card-accent-pill">CORPORATE CARE</span>
@@ -533,7 +341,7 @@
                   </p>
                 </div>
                 <div class="card-footer-action">
-                  <button class="service-read-more-btn" type="button" onclick="window.location.href='#'">
+                  <button class="service-read-more-btn" type="button" onclick="window.location.href='corporate-housekeepers.html'">
                     Read More <i class="bi bi-arrow-up-right-circle-fill"></i>
                   </button>
                 </div>
@@ -543,9 +351,9 @@
 
           <!-- Card 06: Drivers -->
           <div class="col-lg-3 col-md-6 col-sm-6 reveal-up" style="--stagger-delay: 0.3s;">
-            <div class="corporate-service-card" onclick="window.location.href='#'">
+            <div class="corporate-service-card" onclick="window.location.href='professional-drivers.html'">
               <div class="card-img-wrapper">
-                <img src="images/driver/driver.png" alt="Professional Drivers" class="service-img" loading="lazy">
+                <img src="assets/images/facility-management/abhith-professional-driver.png" alt="Professional Drivers" class="service-img" loading="lazy">
                 <div class="card-overlay"></div>
                 <span class="card-accent-pill">CHAUFFEUR & FLEET</span>
               </div>
@@ -558,7 +366,7 @@
                   </p>
                 </div>
                 <div class="card-footer-action">
-                  <button class="service-read-more-btn" type="button" onclick="window.location.href='#'">
+                  <button class="service-read-more-btn" type="button" onclick="window.location.href='professional-drivers.html'">
                     Read More <i class="bi bi-arrow-up-right-circle-fill"></i>
                   </button>
                 </div>
@@ -568,9 +376,9 @@
 
           <!-- Card 07: Janitorial -->
           <div class="col-lg-3 col-md-6 col-sm-6 reveal-up" style="--stagger-delay: 0.4s;">
-            <div class="corporate-service-card" onclick="window.location.href='#'">
+            <div class="corporate-service-card" onclick="window.location.href='janitorial-services.html'">
               <div class="card-img-wrapper">
-                <img src="images/janitors/janitor male.png" alt="Janitorial Services" class="service-img"
+                <img src="assets/images/facility-management/abhith-janitorial-staff-male.png" alt="Janitorial Services" class="service-img"
                   loading="lazy">
                 <div class="card-overlay"></div>
                 <span class="card-accent-pill">SANITATION & HYGIENE</span>
@@ -584,7 +392,7 @@
                   </p>
                 </div>
                 <div class="card-footer-action">
-                  <button class="service-read-more-btn" type="button" onclick="window.location.href='#'">
+                  <button class="service-read-more-btn" type="button" onclick="window.location.href='janitorial-services.html'">
                     Read More <i class="bi bi-arrow-up-right-circle-fill"></i>
                   </button>
                 </div>
@@ -597,7 +405,7 @@
 
       <!-- Bottom Conversion CTA Button -->
       <div class="text-center mt-5 pt-3 reveal-up">
-        <button class="btn-custom btn-custom-gold px-4 py-3 shadow-lg" onclick="window.location.href='#'">
+        <button class="btn-custom btn-custom-gold px-4 py-3 shadow-lg" onclick="window.location.href='contact.html#enquiry'">
           Request a Customized Quote <i class="bi bi-arrow-right ms-2"></i>
         </button>
       </div>
@@ -616,7 +424,7 @@
         <div class="col-lg-5 col-xl-5 reveal-up">
           <div class="about-image-wrapper">
             <div class="about-bracket-frame">
-              <img src="images/manpower/guard.jpg" alt="About Abhith Manpower Services" class="about-img"
+              <img src="assets/images/security/abhith-bouncers-team-lineup-profile.webp" alt="About Abhith Manpower Services" class="about-img"
                 loading="lazy">
               <!-- Decorative elements -->
               <div class="bracket-top-left"></div>
@@ -672,7 +480,7 @@
               </div>
               <div class="highlight-item d-flex align-items-center">
                 <i class="bi bi-people-fill text-gold me-2 fs-5"></i>
-                <span class="fw-bold text-navy">250+ Workforce</span>
+                <span class="fw-bold text-navy">600+ Workforce</span>
               </div>
               <div class="highlight-item d-flex align-items-center">
                 <i class="bi bi-geo-alt-fill text-gold me-2 fs-5"></i>
@@ -681,14 +489,13 @@
             </div>
 
             <div class="mt-4">
-              <a href="#" class="btn-custom btn-custom-navy px-4 py-3 shadow">
+              <a href="about.html" class="btn-custom btn-custom-navy px-4 py-3 shadow">
                 Learn More About Us <i class="bi bi-arrow-right ms-2"></i>
               </a>
             </div>
 
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -711,67 +518,67 @@
         <!-- Logo 1 -->
         <div class="col">
           <div class="client-logo-card">
-            <img src="images/abhith-customer-logo/abhith-customer-logo.png" alt="Client Logo" loading="lazy">
+            <img src="assets/images/clients/mittal-autozone-logo.png" alt="Mittal Autozone" loading="lazy">
           </div>
         </div>
         <!-- Logo 2 -->
         <div class="col">
           <div class="client-logo-card">
-            <img src="images/abhith-customer-logo/ecr.jfif" alt="ECR" loading="lazy">
+            <img src="assets/images/clients/ecr-logo.jpg" alt="ECR Buildtech Pvt. Ltd." loading="lazy">
           </div>
         </div>
         <!-- Logo 3 -->
         <div class="col">
           <div class="client-logo-card">
-            <img src="images/abhith-customer-logo/hotel-nandan.jfif" alt="Hotel Nandan" loading="lazy">
+            <img src="assets/images/clients/hotel-nandan-logo.jpg" alt="Hotel Nandan" loading="lazy">
           </div>
         </div>
         <!-- Logo 4 -->
         <div class="col">
           <div class="client-logo-card">
-            <img src="images/abhith-customer-logo/tata-logo.svg.webp" alt="IC Electricals" loading="lazy">
+            <img src="assets/images/clients/tata-logo.webp" alt="Tata" loading="lazy">
           </div>
         </div>
         <!-- Logo 5 -->
         <div class="col">
           <div class="client-logo-card">
-            <img src="images/abhith-customer-logo/logo-DYPemrAN.webp" alt="DYPemrAN" loading="lazy">
+            <img src="assets/images/clients/lohia-group-logo.png" alt="Lohia Trading Pvt. Ltd." loading="lazy">
           </div>
         </div>
         <!-- Logo 6 -->
         <div class="col">
           <div class="client-logo-card">
-            <img src="images/abhith-customer-logo/lohia.png" alt="Lohia" loading="lazy">
+            <img src="assets/images/clients/neev-lights-logo.jpg" alt="Neev Light Energy" loading="lazy">
           </div>
         </div>
         <!-- Logo 7 -->
         <div class="col">
           <div class="client-logo-card">
-            <img src="images/abhith-customer-logo/neev-light-energy.jfif" alt="Neev Light Energy" loading="lazy">
+            <img src="assets/images/clients/ngc-broadband-logo.webp" alt="NGC Broadband" loading="lazy">
           </div>
         </div>
         <!-- Logo 8 -->
         <div class="col">
           <div class="client-logo-card">
-            <img src="images/abhith-customer-logo/ngcn-logo.webp" alt="NGCN" loading="lazy">
+            <img src="assets/images/clients/ravi-metal-crafts-india-logo.png" alt="Ravi Udyog" loading="lazy">
           </div>
         </div>
         <!-- Logo 9 -->
         <div class="col">
           <div class="client-logo-card">
-            <img src="images/abhith-customer-logo/ravi.png" alt="Ravi" loading="lazy">
+            <img src="assets/images/clients/royal-group-of-constructions-logo.webp" alt="Royal Group of Constructions" loading="lazy">
           </div>
         </div>
         <!-- Logo 10 -->
         <div class="col">
           <div class="client-logo-card">
-            <img src="images/abhith-customer-logo/royal-logo.webp" alt="Royal" loading="lazy">
+            <img src="assets/images/clients/st-theresas-school-morigaon-logo.jpg" alt="St. Theresa's School, Morigaon" loading="lazy">
           </div>
         </div>
         <!-- Logo 11 -->
         <div class="col">
           <div class="client-logo-card">
-            <img src="images/abhith-customer-logo/st-terresa-school.jpg" alt="St Terresa School" loading="lazy">
+            <img src="assets/images/clients/greenwood.webp" alt="The Greenwood Hotels &amp; Resorts" loading="lazy">
           </div>
         </div>
       </div>
@@ -806,7 +613,7 @@
             <!-- Card 1: Guwahati -->
             <div class="location-hub-card active" data-hub="guwahati">
               <div class="loc-card-img-wrap">
-                <img src="images/guwahati-office.jpg" alt="Guwahati Head Office" class="loc-card-img" loading="lazy">
+                <img src="assets/images/locations/guwahati-brahmaputra-river-aerial.jpg" alt="Guwahati Head Office" class="loc-card-img" loading="lazy">
               </div>
               <div class="loc-card-num-badge">01</div>
               <div class="loc-card-info">
@@ -827,7 +634,7 @@
             <!-- Card 2: Noida -->
             <div class="location-hub-card" data-hub="noida">
               <div class="loc-card-img-wrap">
-                <img src="images/noida-office.jpg" alt="Noida Corporate Office" class="loc-card-img" loading="lazy">
+                <img src="assets/images/locations/noida-corporate-skyline.jpg" alt="Noida Corporate Office" class="loc-card-img" loading="lazy">
               </div>
               <div class="loc-card-num-badge">02</div>
               <div class="loc-card-info">
@@ -848,7 +655,7 @@
             <!-- Card 3: Jaipur -->
             <div class="location-hub-card" data-hub="jaipur">
               <div class="loc-card-img-wrap">
-                <img src="images/jaipur-office.jpg" alt="Jaipur Rajasthan Office" class="loc-card-img" loading="lazy">
+                <img src="assets/images/locations/jaipur-hawa-mahal.jpg" alt="Jaipur Rajasthan Office" class="loc-card-img" loading="lazy">
               </div>
               <div class="loc-card-num-badge">03</div>
               <div class="loc-card-info">
@@ -1182,7 +989,7 @@
           <div class="col-lg-5">
             <div class="stats-image-wrapper">
               <div class="stats-image-frame">
-                <img src="images/manpower/security-guard-standing-abhith.png"
+                <img src="assets/images/security/abhith-security-guards-baton-drill.png"
                   alt="Abhith Security Guards in Formation - Professional Squad Drill" class="stats-guard-img"
                   loading="lazy">
                 <div class="stats-image-overlay"></div>
@@ -1197,9 +1004,9 @@
 
               <!-- Hero Metric -->
               <div class="stats-hero-block">
-                <div class="stats-hero-number counter-value" data-target="250" data-suffix="+">250+</div>
+                <div class="stats-hero-number counter-value" data-target="600" data-suffix="+">600+</div>
                 <div class="stats-hero-text">
-                  Professionals supporting client operations daily across India
+                  Guards supporting client operations daily across India
                 </div>
               </div>
 
@@ -1223,7 +1030,7 @@
 
                 <div class="col-6 col-md-4">
                   <div class="stat-item-horizontal">
-                    <div class="stat-num-val counter-value" data-target="4.6" data-decimal="true" data-suffix="★">4.6★
+                    <div class="stat-num-val counter-value" data-target="4.8" data-decimal="true" data-suffix="★">4.8★
                     </div>
                     <div class="stat-lbl-val">Google Rating</div>
                   </div>
@@ -1299,7 +1106,7 @@
           </div>
           <div class="d-flex align-items-center gap-2 pe-sm-3 border-end-sm">
             <span class="fw-black lh-1"
-              style="font-size: 1.7rem; font-family: var(--font-heading); color: var(--navy);">4.6</span>
+              style="font-size: 1.7rem; font-family: var(--font-heading); color: var(--navy);">4.8</span>
             <span style="font-size: 0.95rem; color: #FBBC04; letter-spacing: 1.5px;">★★★★★</span>
           </div>
           <div class="text-muted fw-semibold" style="font-size: 0.9rem;">
@@ -1645,7 +1452,7 @@
             answers below.
           </p>
           <div class="mt-4">
-            <button class="btn-custom btn-custom-navy" onclick="window.location.href='#'">
+            <button class="btn-custom btn-custom-navy" onclick="window.location.href='contact.html'">
               Have More Questions?
             </button>
           </div>
@@ -1751,7 +1558,7 @@
        DRAMATIC FINAL CTA SECTION
        ========================================================================== -->
   <section class="final-cta-section">
-    <div class="cta-bg-image" style="background-image: url('images/abhith-new/security-guard-abhith-hero.webp');">
+    <div class="cta-bg-image" style="background-image: url('assets/images/security/abhith-security-guards-outdoor-event.webp');">
     </div>
 
     <div class="container-fluid px-lg-5">
@@ -1766,13 +1573,13 @@
         </p>
 
         <div class="d-flex flex-wrap justify-content-center gap-3">
-          <button class="btn-custom btn-custom-gold" onclick="window.location.href='#'">
+          <button class="btn-custom btn-custom-gold" onclick="window.location.href='contact.html#enquiry'">
             REQUEST A QUOTE
             <svg class="btn-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
               <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>
           </button>
-          <a href="tel:+919876543210" class="btn-custom btn-custom-outline-white">
+          <a href="tel:+918453967564" class="btn-custom btn-custom-outline-white">
             TALK TO OUR TEAM
           </a>
         </div>
@@ -1782,136 +1589,9 @@
 
 
   <!-- ==========================================================================
-       CORPORATE FOOTER
+       CORPORATE FOOTER (shared – see assets/layout.js)
        ========================================================================== -->
-  <!-- ==========================================================================
-       CORPORATE FOOTER
-       ========================================================================== -->
-  <footer class="footer-section" id="footer">
-    <div class="container-fluid px-lg-5">
-
-      <!-- Footer Top CTA Banner -->
-      <div class="footer-cta-banner p-4 p-lg-5 mb-5 rounded-3">
-        <div class="row align-items-center g-4">
-          <div class="col-lg-8">
-            <h3 class="footer-cta-title mb-2 text-white fw-bold">
-              Need Reliable Security & Manpower Support?
-            </h3>
-            <p class="text-gold mb-0 small font-heading" style="letter-spacing: 0.05em;">
-              "We provide dependable people and professional solutions built around your operational requirements."
-            </p>
-          </div>
-          <div class="col-lg-4 text-lg-end">
-            <button class="btn-custom btn-custom-gold" onclick="window.location.href='#'">
-              REQUEST A QUOTE
-              <svg class="btn-arrow-icon ms-2" style="width: 20px; height: 20px;" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2.5">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div class="row g-5 mb-5">
-
-        <!-- Col 1: Brand & Statement -->
-        <div class="col-lg-4 col-md-6">
-          <div class="footer-logo-box mb-3">
-            <img src="images/logo-abhith.png" alt="Abhith Manpower Services Pvt. Ltd." class="footer-logo-img">
-          </div>
-          <p class="footer-brand-desc mb-3">
-            Professional security, manpower and facility management solutions built around your operational
-            requirements.
-          </p>
-          <div class="footer-tagline-quote">
-            WE HELP YOU SLEEP BETTER.
-          </div>
-        </div>
-
-        <!-- Col 2: COMPANY -->
-        <div class="col-lg-2 col-md-6">
-          <h4 class="footer-heading">COMPANY</h4>
-          <ul class="footer-links-list">
-            <li><a href="#statsSection"><i class="bi bi-chevron-right me-1 text-gold"></i> About Us</a></li>
-            <li><a href="#statsSection"><i class="bi bi-chevron-right me-1 text-gold"></i> Our Journey</a></li>
-            <li><a href="#statsSection"><i class="bi bi-chevron-right me-1 text-gold"></i> Leadership Team</a></li>
-            <li><a href="#statsSection"><i class="bi bi-chevron-right me-1 text-gold"></i> Our Commitment</a></li>
-          </ul>
-        </div>
-
-        <!-- Col 3: SERVICES -->
-        <div class="col-lg-3 col-md-6">
-          <h4 class="footer-heading">SERVICES</h4>
-          <ul class="footer-links-list">
-            <li><a href="#services" class="fw-bold text-gold"><i class="bi bi-shield-check me-1"></i> Security Manpower
-                Services</a></li>
-            <li class="ps-2"><a href="#services">• PSO – Armed</a></li>
-            <li class="ps-2"><a href="#services">• Bouncer & Unarmed Bodyguard</a></li>
-            <li class="ps-2"><a href="#services">• Security Guards</a></li>
-            <li class="mt-2"><a href="#services" class="fw-bold text-gold"><i class="bi bi-building-gear me-1"></i>
-                Facility Management</a></li>
-            <li class="ps-2"><a href="#services">• Housekeeping</a></li>
-            <li class="ps-2"><a href="#services">• Drivers</a></li>
-            <li class="ps-2"><a href="#services">• Janitorial Services</a></li>
-          </ul>
-        </div>
-
-        <!-- Col 4: QUICK LINKS -->
-        <div class="col-lg-3 col-md-6">
-          <h4 class="footer-heading">QUICK LINKS & CONTACT</h4>
-          <ul class="footer-links-list mb-4">
-            <li><a href="#clients"><i class="bi bi-chevron-right me-1 text-gold"></i> Industries & Projects</a></li>
-            <li><a href="#presence"><i class="bi bi-chevron-right me-1 text-gold"></i> Geographical Presence</a></li>
-            <li><a href="#services"><i class="bi bi-chevron-right me-1 text-gold"></i> Gallery</a></li>
-            <li><a href="#testimonials"><i class="bi bi-chevron-right me-1 text-gold"></i> Testimonials</a></li>
-            <li><a href="#faq"><i class="bi bi-chevron-right me-1 text-gold"></i> FAQ</a></li>
-            <li><a href="#footer"><i class="bi bi-chevron-right me-1 text-gold"></i> Contact Us</a></li>
-          </ul>
-
-          <div class="footer-contact-block small">
-            <div class="mb-2"><i class="bi bi-geo-alt-fill text-gold me-2"></i> <strong>Head Office:</strong> GS Road,
-              Christian Basti, Guwahati, Assam</div>
-            <div class="mb-2"><i class="bi bi-buildings-fill text-gold me-2"></i> <strong>Regional Offices:</strong>
-              Noida (NCR) | Jaipur (North)</div>
-            <div class="mb-2"><i class="bi bi-telephone-fill text-gold me-2"></i> <strong>24×7 Desk:</strong> +91 98765
-              43210</div>
-            <div class="mb-3"><i class="bi bi-envelope-fill text-gold me-2"></i> <strong>Email:</strong>
-              info@abhithgroup.com</div>
-
-            <div class="d-flex align-items-center gap-2 pt-2 border-top border-secondary border-opacity-25">
-              <span class="small me-2 text-white-50">Social Media:</span>
-              <a href="#" class="social-icon-link" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-              <a href="#" class="social-icon-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-              <a href="#" class="social-icon-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-              <a href="#" class="social-icon-link" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
-              <a href="#" class="social-icon-link" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Bottom Motto Bar -->
-
-
-      <!-- Bottom Bar -->
-      <div class="footer-bottom-bar">
-        <div>
-          © 2026 Abhith Manpower Services Pvt. Ltd. All Rights Reserved.
-        </div>
-        <div class="d-flex align-items-center gap-4">
-          <a href="#" class="text-white-50 text-decoration-none">Privacy Policy</a>
-          <span class="text-white-50">|</span>
-          <a href="#" class="text-white-50 text-decoration-none">Terms of Use</a>
-          <div class="back-to-top-btn" id="backToTopBtn" title="Back to Top">
-            <i class="bi bi-arrow-up"></i>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </footer>
+  <script>AbhithLayout.render('footer');</script>
 
 
 
@@ -1921,6 +1601,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Custom Interactive JS -->
   <script src="assets/script.js"></script>
+  <script src="assets/pages.js"></script>
 
 </body>
 

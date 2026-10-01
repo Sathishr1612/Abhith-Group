@@ -1950,8 +1950,17 @@ img {
   height: 100%;
   background-size: cover;
   background-position: center;
-  opacity: 0.25;
-  filter: brightness(0.7) contrast(1.2);
+  opacity: 0.5;
+  filter: brightness(0.85) contrast(1.1);
+}
+
+/* Darker centre so the headline and tagline stay readable over the photo */
+.final-cta-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 70% at center, rgba(10, 14, 45, 0.75) 0%, rgba(10, 14, 45, 0.35) 70%, rgba(10, 14, 45, 0.15) 100%);
+  pointer-events: none;
 }
 
 .cta-content-wrapper {
@@ -1968,15 +1977,18 @@ img {
   color: var(--white);
   margin-bottom: 1.2rem;
   line-height: 1.15;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
 }
 
 .cta-quote-statement {
   font-family: var(--font-serif);
-  font-size: 1.45rem;
-  color: var(--gold);
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #f2d27a;
   font-style: italic;
   margin-bottom: 2.5rem;
   line-height: 1.5;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85), 0 0 2px rgba(0, 0, 0, 0.6);
 }
 
 /* --- FOOTER --- */
@@ -2103,16 +2115,86 @@ img {
   box-shadow: 0 5px 15px rgba(233, 191, 105, 0.3);
 }
 
-/* --- ANIMATION / REVEAL UTILITIES --- */
-.reveal-up {
-  opacity: 0;
-  transform: translateY(35px);
-  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+/* --- ANIMATION / REVEAL UTILITIES ---
+   script.js adds these classes site-wide (two-column rows get left/right,
+   card rows get a stagger) and removes them once the reveal has finished,
+   so they never interfere with an element's own hover transforms. */
+:root {
+  --reveal-ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --reveal-duration: 0.9s;
+  --reveal-distance: 36px;
 }
 
-.reveal-up.active {
+.reveal-up,
+.reveal-left,
+.reveal-right,
+.reveal-fade {
+  opacity: 0;
+  transition: opacity var(--reveal-duration) var(--reveal-ease), transform var(--reveal-duration) var(--reveal-ease);
+  transition-delay: var(--stagger-delay, 0s);
+  will-change: opacity, transform;
+}
+
+.reveal-up { transform: translate3d(0, var(--reveal-distance), 0); }
+.reveal-left { transform: translate3d(calc(var(--reveal-distance) * -1.4), 0, 0); }
+.reveal-right { transform: translate3d(calc(var(--reveal-distance) * 1.4), 0, 0); }
+
+.reveal-up.active,
+.reveal-left.active,
+.reveal-right.active,
+.reveal-fade.active {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
+}
+
+/* Keep sideways reveals from ever widening the page */
+html { overflow-x: clip; }
+
+/* Page hero: content settles in on load */
+.pg-hero .container-fluid > *,
+.hero-content-layer .col-lg-8 > * {
+  animation: heroContentIn 1s var(--reveal-ease) both;
+}
+
+.pg-hero .container-fluid > :nth-child(2),
+.hero-content-layer .col-lg-8 > :nth-child(2) { animation-delay: 0.12s; }
+.pg-hero .container-fluid > :nth-child(3),
+.hero-content-layer .col-lg-8 > :nth-child(3) { animation-delay: 0.24s; }
+.pg-hero .container-fluid > :nth-child(n+4),
+.hero-content-layer .col-lg-8 > :nth-child(n+4) { animation-delay: 0.36s; }
+
+@keyframes heroContentIn {
+  from { opacity: 0; transform: translate3d(0, 24px, 0); }
+  to { opacity: 1; transform: none; }
+}
+
+/* Tablet & mobile: shorter, vertical-only motion */
+@media (max-width: 767.98px) {
+  :root {
+    --reveal-distance: 24px;
+    --reveal-duration: 0.75s;
+  }
+
+  .reveal-left,
+  .reveal-right {
+    transform: translate3d(0, var(--reveal-distance), 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-up,
+  .reveal-left,
+  .reveal-right,
+  .reveal-fade {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .pg-hero .container-fluid > *,
+  .hero-content-layer .col-lg-8 > * {
+    animation: none !important;
+  }
 }
 
 /* --- RESPONSIVE MEDIA QUERIES --- */
@@ -2488,11 +2570,6 @@ img {
   transform: translate(2px, -2px);
 }
 
-/* Stagger Delay Helper for Scroll Reveal */
-.reveal-up[style*="--stagger-delay"] {
-  transition-delay: var(--stagger-delay, 0s);
-}
-
 /* Mobile Responsive Enhancements for Our Services Section */
 @media (max-width: 991.98px) {
   .services-section {
@@ -2729,7 +2806,7 @@ img {
   background-image:
     linear-gradient(to right, rgba(255, 252, 245, 0.95) 0%, rgba(245, 247, 251, 0.6) 30%, transparent 55%),
     linear-gradient(to bottom, rgba(255, 252, 245, 0.9) 0%, transparent 15%, transparent 85%, rgba(238, 242, 249, 0.9) 100%),
-    url('../images/presence-bg.jpg?v=2');
+    url('images/backgrounds/glass-office-tower-background.jpg?v=2');
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: cover;
@@ -3477,5 +3554,88 @@ img {
   .presence-stats-bar {
     padding: 20px 16px;
     border-radius: 16px;
+  }
+}
+/* ==========================================================================
+   HEADER – compact desktop menu for small laptops / landscape tablets
+   (992px–1399px): keeps all menu items and the quote button on screen
+   ========================================================================== */
+@media (min-width: 992px) and (max-width: 1399.98px) {
+  .main-navbar > .container-fluid {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .main-navbar .navbar-brand {
+    margin-right: 10px !important;
+  }
+
+  .main-navbar .header-logo-img {
+    height: 60px;
+  }
+
+  .main-navbar .nav-link-custom {
+    font-size: 0.76rem;
+    letter-spacing: 0.01em;
+    padding: 8px 7px !important;
+  }
+
+  .main-navbar .nav-link-custom::after {
+    left: 7px;
+    right: 7px;
+  }
+
+  #navbarContent > .d-flex {
+    margin-left: 8px !important;
+  }
+
+  #navbarContent .btn-custom {
+    padding: 11px 16px;
+    font-size: 0.76rem;
+    letter-spacing: 0.04em;
+    gap: 6px;
+  }
+}
+
+/* Top bar & header CTA never wrap onto two lines */
+.top-trust-bar span,
+.top-trust-bar a,
+.main-navbar .btn-custom {
+  white-space: nowrap;
+}
+
+/* Hide the hubs line where the top bar would otherwise overflow */
+@media (min-width: 992px) and (max-width: 1399.98px) {
+  .top-trust-bar .top-bar-hubs {
+    display: none !important;
+  }
+}
+
+/* The logo keeps its size; the menu gives way instead */
+.main-navbar .navbar-brand {
+  flex-shrink: 0;
+}
+
+/* Tablets & small laptops: phone number and email don't both fit in the top bar */
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .top-trust-bar a[href^="mailto:"],
+  .top-trust-bar a[href^="mailto:"] + span {
+    display: none !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1099.98px) {
+  .main-navbar .nav-link-custom {
+    font-size: 0.74rem;
+    padding: 8px 5px !important;
+  }
+
+  .main-navbar .nav-link-custom::after {
+    left: 5px;
+    right: 5px;
+  }
+
+  #navbarContent .btn-custom {
+    padding: 10px 12px;
   }
 }
