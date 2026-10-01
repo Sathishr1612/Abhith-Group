@@ -3762,7 +3762,7 @@ a.corporate-service-card {
 }
 
 .main-navbar .nav-link-custom {
-  font-size: 0.93rem;
+  font-size: 0.99rem;
   font-weight: 700;
   letter-spacing: 0.01em;
   padding: 8px 11px !important;
@@ -3783,7 +3783,7 @@ a.corporate-service-card {
 
 @media (min-width: 1400px) and (max-width: 1699.98px) {
   .main-navbar .header-logo-img { height: 76px; }
-  .main-navbar .nav-link-custom { font-size: 0.88rem; padding: 8px 9px !important; }
+  .main-navbar .nav-link-custom { font-size: 0.92rem; padding: 8px 9px !important; }
   .main-navbar .nav-link-custom::after { left: 9px; right: 9px; }
 }
 
