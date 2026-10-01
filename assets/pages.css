@@ -3745,3 +3745,161 @@ a.corporate-service-card {
     height: 340px;
   }
 }
+
+/* ==========================================================================
+   READABILITY UPDATE – larger logo, larger menu text, readable body copy
+   (placed last so it overrides the earlier sizes in style.css / pages.css)
+   ========================================================================== */
+
+/* --- Header: logo + menu --- */
+.main-navbar {
+  padding: 6px 0;
+}
+
+.main-navbar .header-logo-img {
+  height: 76px;
+  max-height: none;
+}
+
+.main-navbar .nav-link-custom {
+  font-size: 0.93rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  padding: 8px 11px !important;
+}
+
+.main-navbar .nav-link-custom::after {
+  left: 11px;
+  right: 11px;
+}
+
+/* Header quote button: slimmer so it matches the menu, not the hero buttons */
+@media (min-width: 1200px) {
+  #navbarContent .btn-custom {
+    padding: 12px 24px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1699.98px) {
+  .main-navbar .header-logo-img { height: 76px; }
+  .main-navbar .nav-link-custom { font-size: 0.88rem; padding: 8px 9px !important; }
+  .main-navbar .nav-link-custom::after { left: 9px; right: 9px; }
+}
+
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .main-navbar .header-logo-img { height: 70px; }
+  .main-navbar .nav-link-custom { font-size: 0.86rem; letter-spacing: 0; padding: 8px 7px !important; }
+  .main-navbar .nav-link-custom::after { left: 7px; right: 7px; }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .main-navbar .header-logo-img { height: 64px; }
+  .main-navbar .nav-link-custom { font-size: 0.8rem; letter-spacing: 0; padding: 8px 5px !important; }
+  .main-navbar .nav-link-custom::after { left: 5px; right: 5px; }
+}
+
+/* Mobile / tablet: collapsed menu gets large, easy-to-tap links */
+@media (max-width: 991.98px) {
+  .main-navbar .header-logo-img { height: 70px; }
+  .main-navbar .nav-link-custom {
+    font-size: 1.05rem;
+    padding: 12px 4px !important;
+    border-bottom: 1px solid rgba(1, 27, 64, 0.06);
+  }
+  .main-navbar .nav-link-custom::after { display: none; }
+}
+
+@media (max-width: 575.98px) {
+  .main-navbar .header-logo-img { height: 62px; }
+}
+
+/* --- Body copy: nothing smaller than ~15–16px for reading text --- */
+.service-card-text,
+.service-card-desc,
+.testi-text,
+.pg-evolve-card p,
+.pg-jstop p,
+.pg-client-list li,
+.pg-purpose-route li,
+.active-presence-list li,
+.loc-card-address,
+.pg-contact-line,
+.pg-talk-sub {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.pg-check-list li,
+.pg-jservices li,
+.pg-cv-item p,
+.accordion-custom .accordion-body {
+  font-size: 1.02rem;
+}
+
+.pg-text-body {
+  font-size: 1.06rem;
+  line-height: 1.8;
+}
+
+.section-subtitle,
+.presence-main-lead {
+  font-size: 1.1rem;
+  line-height: 1.75;
+}
+
+.hero-lead-text,
+.pg-hero-lead {
+  font-size: 1.18rem;
+  line-height: 1.7;
+}
+
+.footer-section {
+  font-size: 0.97rem;
+}
+
+.footer-bottom-bar {
+  font-size: 0.88rem;
+}
+
+@media (max-width: 767.98px) {
+  .hero-lead-text,
+  .pg-hero-lead {
+    font-size: 1.02rem;
+    line-height: 1.6;
+  }
+
+  .pg-text-body,
+  .section-subtitle,
+  .presence-main-lead {
+    font-size: 1rem;
+  }
+
+  .service-card-text,
+  .service-card-desc,
+  .testi-text {
+    font-size: 0.97rem;
+  }
+
+  .pg-service-lead {
+    font-size: 1.08rem;
+  }
+}
+
+/* Banners start exactly below the fixed header.
+   --header-h is measured live in layout.js; the numbers are only fallbacks. */
+.pg-hero-bg {
+  top: var(--header-h, 126px);
+}
+
+@media (max-width: 767.98px) {
+  .pg-hero-bg {
+    top: var(--header-h, 76px);
+  }
+}
+
+@media (max-width: 991px) {
+  .hero-slide-bg, .hero-slide-1, .hero-slide-2, .hero-slide-3, .hero-slide-4 {
+    background-position: center var(--header-h, 80px) !important;
+  }
+}

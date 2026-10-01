@@ -301,6 +301,18 @@
       const page = document.body ? document.body.getAttribute('data-page') : '';
       const html = part === 'header' ? header(page) : footer();
       target.insertAdjacentHTML('beforebegin', html);
+      if (part === 'header') trackHeaderHeight();
     }
   };
+
+  // Expose the fixed header's real height as --header-h so page banners can
+  // start exactly below it at every screen size (no gap, nothing hidden).
+  function trackHeaderHeight() {
+    const el = document.getElementById('headerWrapper');
+    if (!el) return;
+    const update = () => document.documentElement.style.setProperty('--header-h', el.offsetHeight + 'px');
+    update();
+    if ('ResizeObserver' in window) new ResizeObserver(update).observe(el);
+    window.addEventListener('load', update);
+  }
 })();
