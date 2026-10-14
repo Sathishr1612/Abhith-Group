@@ -1742,6 +1742,7 @@ html {
   border: 1px solid rgba(1, 27, 64, 0.08);
   padding: 50px;
   box-shadow: 0 12px 35px rgba(1, 27, 64, 0.06);
+  scroll-margin-top: 140px;
 }
 
 .pg-legal-card h2 {
@@ -1750,6 +1751,7 @@ html {
   margin: 2.2rem 0 0.9rem;
   padding-top: 1.6rem;
   border-top: 1px solid var(--border-color);
+  scroll-margin-top: 140px;
 }
 
 .pg-legal-card h2:first-of-type {
@@ -1813,6 +1815,64 @@ html {
 .pg-legal-toc a:hover {
   color: var(--gold-hover);
 }
+
+.pg-legal-toc {
+  max-height: calc(100vh - 170px);
+  overflow-y: auto;
+}
+
+.pg-legal-pill-nav {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.pg-legal-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 22px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border: 1.5px solid rgba(1, 27, 64, 0.15);
+  background: var(--white);
+  color: var(--navy);
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 15px rgba(1, 27, 64, 0.04);
+}
+
+.pg-legal-pill-btn:hover {
+  background: var(--navy);
+  color: var(--gold);
+  border-color: var(--navy);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(1, 27, 64, 0.12);
+}
+
+.pg-legal-pill-btn.active-pill {
+  background: var(--navy);
+  color: var(--gold);
+  border-color: var(--navy);
+}
+
+.pg-legal-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: rgba(229, 169, 59, 0.14);
+  color: #B47B16;
+  border: 1px solid rgba(229, 169, 59, 0.35);
+  margin-bottom: 16px;
+}
+
 
 /* --- Responsive --- */
 @media (max-width: 1199.98px) {

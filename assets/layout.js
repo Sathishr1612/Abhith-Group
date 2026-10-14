@@ -134,7 +134,6 @@
                         ${megaItem('corporate-housekeepers.html', 'bi-houses-fill', 'Corporate Housekeepers')}
                         ${megaItem('professional-drivers.html', 'bi-car-front-fill', 'Professional Drivers')}
                         ${megaItem('janitorial-services.html', 'bi-stars', 'Janitorial Services')}
-                        ${megaItem('facility-management-support.html', 'bi-tools', 'Facility Management')}
                       </ul>
                     </div>
 
@@ -147,10 +146,10 @@
               <a class="nav-link-custom nav-link${active('industries')}" href="industries-projects.html">Industries &amp; Projects</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link-custom nav-link" href="index.html#presence">Geographical Presence</a>
+              <a class="nav-link-custom nav-link${active('gallery')}" href="gallery.html">Gallery</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link-custom nav-link${active('gallery')}" href="gallery.html">Gallery</a>
+              <a class="nav-link-custom nav-link${active('careers')}" href="careers.html">Careers</a>
             </li>
             <li class="nav-item">
               <a class="nav-link-custom nav-link" href="index.html#testimonials">Testimonials</a>
@@ -232,6 +231,7 @@
             ${link('facility-management.html', 'Facility Management')}
             ${link('industries-projects.html', 'Industries &amp; Projects')}
             ${link('gallery.html', 'Gallery')}
+            ${link('careers.html', 'Careers &amp; Jobs')}
             ${link('contact.html', 'Contact Us')}
           </ul>
         </div>
@@ -281,9 +281,9 @@
           © ${year} Abhith Manpower Services Pvt. Ltd. All Rights Reserved.
         </div>
         <div class="d-flex align-items-center gap-4">
-          <a href="privacy-policy.html" class="text-white-50 text-decoration-none">Privacy Policy</a>
+          <a href="terms-of-use.html#privacy" class="text-white-50 text-decoration-none">Privacy Policy</a>
           <span class="text-white-50">|</span>
-          <a href="terms-of-use.html" class="text-white-50 text-decoration-none">Terms of Use</a>
+          <a href="terms-of-use.html#terms" class="text-white-50 text-decoration-none">Terms &amp; Conditions</a>
           <div class="back-to-top-btn" id="backToTopBtn" title="Back to Top" role="button" tabindex="0" aria-label="Back to top">
             <i class="bi bi-arrow-up"></i>
           </div>

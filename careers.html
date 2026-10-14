@@ -1,0 +1,1786 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Careers &amp; Job Openings | Abhith Manpower Services Pvt. Ltd.</title>
+  <meta name="description"
+    content="Job search and direct application for security guards, gunmen, bouncers, drivers, and facility staff at Abhith Manpower Services Pvt. Ltd. Freshers and experienced candidates welcome with on-time salary, PF, ESI and free training.">
+
+  <!-- Favicon / site icon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/branding/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/branding/favicon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/images/branding/favicon/android-chrome-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/branding/favicon/apple-touch-icon.png">
+  <meta name="theme-color" content="#011B40">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400;1,600&family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS + Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Custom Style System -->
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/pages.css">
+
+  <!-- Shared Header / Footer -->
+  <script src="assets/layout.js"></script>
+
+  <style>
+    /* ==========================================================================
+       CAREERS PAGE LUXURY DESIGN SYSTEM
+       ========================================================================== */
+    :root {
+      --career-gold: #E5A93B;
+      --career-gold-dark: #C98A20;
+      --career-navy: #011B40;
+      --career-navy-light: #0B254D;
+      --career-bg-soft: #F6F8FB;
+    }
+
+    /* Hero Enhancements */
+    .career-hero {
+      position: relative;
+      background: linear-gradient(135deg, rgba(1, 27, 64, 0.95) 0%, rgba(5, 41, 92, 0.86) 100%),
+                  url('assets/images/abhith-security/abhith-traing-hero.jpg') center 30% / cover no-repeat;
+      padding: 190px 0 110px;
+      color: #FFFFFF;
+      overflow: hidden;
+    }
+
+    .career-hero::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 450px;
+      height: 450px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(229, 169, 59, 0.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-trust-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 14px;
+      margin-top: 36px;
+    }
+
+    .hero-trust-pill {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 12px;
+      padding: 12px 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: all 0.3s ease;
+    }
+
+    .hero-trust-pill:hover {
+      background: rgba(255, 255, 255, 0.14);
+      border-color: rgba(229, 169, 59, 0.4);
+      transform: translateY(-2px);
+    }
+
+    .hero-trust-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: rgba(229, 169, 59, 0.2);
+      color: var(--career-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+
+    .hero-trust-pill h6 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 2px;
+    }
+
+    .hero-trust-pill p {
+      font-size: 0.75rem;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 0;
+    }
+
+    /* Smart Search Command Center */
+    .career-search-wrapper {
+      position: relative;
+      margin-top: -45px;
+      z-index: 20;
+    }
+
+    .career-search-panel {
+      background: #FFFFFF;
+      border-radius: 20px;
+      padding: 24px 28px;
+      box-shadow: 0 16px 45px rgba(1, 27, 64, 0.12);
+      border: 1px solid rgba(1, 27, 64, 0.08);
+    }
+
+    .search-input-group {
+      background: #F8FAFC;
+      border: 1.5px solid rgba(1, 27, 64, 0.1);
+      border-radius: 12px;
+      padding: 4px 14px;
+      display: flex;
+      align-items: center;
+      transition: all 0.25s ease;
+    }
+
+    .search-input-group:focus-within {
+      background: #FFFFFF;
+      border-color: var(--career-gold);
+      box-shadow: 0 0 0 4px rgba(229, 169, 59, 0.15);
+    }
+
+    .search-input-group input {
+      border: none;
+      background: transparent;
+      outline: none;
+      width: 100%;
+      padding: 10px 8px;
+      font-size: 0.95rem;
+      color: var(--navy);
+      font-weight: 500;
+    }
+
+    .search-select-custom {
+      background-color: #F8FAFC;
+      border: 1.5px solid rgba(1, 27, 64, 0.1);
+      border-radius: 12px;
+      padding: 12px 14px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--navy);
+      cursor: pointer;
+      transition: all 0.25s ease;
+      height: 100%;
+    }
+
+    .search-select-custom:focus {
+      border-color: var(--career-gold);
+      box-shadow: 0 0 0 4px rgba(229, 169, 59, 0.15);
+      background-color: #FFFFFF;
+    }
+
+    /* Role Quick Chips */
+    .quick-chips-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+      padding-top: 16px;
+      border-top: 1px dashed rgba(1, 27, 64, 0.1);
+    }
+
+    .chip-label {
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: #64748B;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-right: 6px;
+    }
+
+    .role-chip {
+      background: #F1F5F9;
+      color: var(--navy);
+      border: 1px solid rgba(1, 27, 64, 0.08);
+      border-radius: 50px;
+      padding: 6px 14px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .role-chip:hover {
+      background: rgba(229, 169, 59, 0.15);
+      color: var(--navy);
+      border-color: rgba(229, 169, 59, 0.4);
+      transform: translateY(-1px);
+    }
+
+    .role-chip.active {
+      background: var(--navy);
+      color: var(--career-gold);
+      border-color: var(--navy);
+      box-shadow: 0 4px 12px rgba(1, 27, 64, 0.2);
+    }
+
+    /* 4-Step Application Road Map */
+    .step-journey-grid {
+      position: relative;
+    }
+
+    .step-journey-card {
+      background: #FFFFFF;
+      border-radius: 20px;
+      padding: 32px 24px;
+      border: 1px solid rgba(1, 27, 64, 0.08);
+      box-shadow: 0 10px 30px rgba(1, 27, 64, 0.05);
+      position: relative;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.3s ease;
+    }
+
+    .step-journey-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 40px rgba(1, 27, 64, 0.1);
+      border-color: rgba(229, 169, 59, 0.4);
+    }
+
+    .step-number-badge {
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, var(--navy) 0%, #082F6A 100%);
+      color: var(--career-gold);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.35rem;
+      font-weight: 900;
+      margin-bottom: 20px;
+      box-shadow: 0 8px 20px rgba(1, 27, 64, 0.22);
+    }
+
+    .step-journey-card h4 {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .step-hindi-label {
+      font-size: 0.85rem;
+      color: var(--career-gold-dark);
+      font-weight: 700;
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    .step-journey-card p {
+      font-size: 0.88rem;
+      color: #64748B;
+      line-height: 1.6;
+      margin-bottom: 0;
+      flex-grow: 1;
+    }
+
+    /* Fresher / No Experience High-Trust Banner */
+    .fresher-banner {
+      background: linear-gradient(135deg, #011B40 0%, #062B61 100%);
+      border-radius: 20px;
+      padding: 34px 38px;
+      color: #FFFFFF;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(229, 169, 59, 0.3);
+      box-shadow: 0 14px 40px rgba(1, 27, 64, 0.16);
+      margin-top: 40px;
+    }
+
+    .fresher-banner::before {
+      content: '';
+      position: absolute;
+      top: -60px;
+      right: -60px;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(229, 169, 59, 0.2) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    /* Luxury Job Openings Card UI */
+    .job-listing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 28px;
+    }
+
+    .luxury-job-card {
+      background: #FFFFFF;
+      border-radius: 20px;
+      border: 1px solid rgba(1, 27, 64, 0.08);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 10px 30px rgba(1, 27, 64, 0.05);
+      transition: all 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+    }
+
+    .luxury-job-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 22px 50px rgba(1, 27, 64, 0.12);
+      border-color: rgba(229, 169, 59, 0.5);
+    }
+
+    .job-card-visual {
+      height: 190px;
+      position: relative;
+      overflow: hidden;
+      background: #011B40;
+    }
+
+    .job-card-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 25%;
+      transition: transform 0.6s ease;
+    }
+
+    .luxury-job-card:hover .job-card-visual img {
+      transform: scale(1.06);
+    }
+
+    .job-card-visual-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(1, 27, 64, 0.05) 0%, rgba(1, 27, 64, 0.45) 100%);
+    }
+
+    .job-floating-tag {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: rgba(1, 27, 64, 0.85);
+      backdrop-filter: blur(8px);
+      color: #FFFFFF;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 5px 12px;
+      border-radius: 50px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      z-index: 2;
+    }
+
+    .job-urgent-tag {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background: #DC2626;
+      color: #FFFFFF;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 50px;
+      box-shadow: 0 4px 12px rgba(220, 38, 38, 0.35);
+      z-index: 2;
+    }
+
+    .job-card-main {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .job-card-title-group h3 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 4px;
+      line-height: 1.35;
+    }
+
+    .job-card-hindi-sub {
+      font-size: 0.85rem;
+      color: var(--career-gold-dark);
+      font-weight: 700;
+      margin-bottom: 14px;
+      display: block;
+    }
+
+    .job-meta-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-bottom: 16px;
+    }
+
+    .meta-chip {
+      background: #F8FAFC;
+      border: 1px solid rgba(1, 27, 64, 0.08);
+      border-radius: 8px;
+      padding: 5px 10px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: #334155;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .meta-chip i {
+      color: var(--career-gold-dark);
+    }
+
+    .meta-chip.highlight-green {
+      background: rgba(16, 185, 129, 0.1);
+      color: #065F46;
+      border-color: rgba(16, 185, 129, 0.25);
+    }
+
+    .meta-chip.highlight-gold {
+      background: rgba(229, 169, 59, 0.12);
+      color: #8C5806;
+      border-color: rgba(229, 169, 59, 0.3);
+    }
+
+    .job-desc-snippet {
+      font-size: 0.86rem;
+      color: #64748B;
+      line-height: 1.6;
+      margin-bottom: 18px;
+      flex-grow: 1;
+    }
+
+    .job-perks-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 20px;
+      border-top: 1px dashed rgba(1, 27, 64, 0.1);
+      padding-top: 14px;
+    }
+
+    .job-perks-list li {
+      font-size: 0.82rem;
+      color: #475569;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+    }
+
+    .job-perks-list li i {
+      color: #059669;
+      font-size: 0.95rem;
+    }
+
+    .job-card-actions {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 10px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(1, 27, 64, 0.08);
+    }
+
+    .btn-apply-primary {
+      background: linear-gradient(135deg, var(--navy) 0%, #07295B 100%);
+      color: var(--career-gold) !important;
+      font-family: var(--font-heading);
+      font-size: 0.88rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      padding: 11px 18px;
+      border-radius: 12px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border: 1px solid rgba(229, 169, 59, 0.3);
+      transition: all 0.25s ease;
+      cursor: pointer;
+    }
+
+    .btn-apply-primary:hover {
+      background: var(--career-gold);
+      color: var(--navy) !important;
+      border-color: var(--career-gold);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(229, 169, 59, 0.35);
+    }
+
+    .btn-whatsapp-apply {
+      background: #25D366;
+      color: #FFFFFF !important;
+      font-size: 1.25rem;
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
+    }
+
+    .btn-whatsapp-apply:hover {
+      background: #1EBE5D;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(37, 211, 102, 0.45);
+    }
+
+    /* Fast Track Application Form & Officer Card */
+    .portal-form-card {
+      background: #FFFFFF;
+      border-radius: 24px;
+      padding: 36px 32px;
+      border: 1px solid rgba(1, 27, 64, 0.08);
+      box-shadow: 0 16px 45px rgba(1, 27, 64, 0.08);
+    }
+
+    .officer-desk-card {
+      background: linear-gradient(135deg, #011B40 0%, #072652 100%);
+      border-radius: 24px;
+      padding: 36px 30px;
+      color: #FFFFFF;
+      border: 1px solid rgba(229, 169, 59, 0.35);
+      box-shadow: 0 18px 45px rgba(1, 27, 64, 0.18);
+      position: sticky;
+      top: 100px;
+    }
+
+    .officer-avatar-frame {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+      border: 2px dashed rgba(229, 169, 59, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      color: var(--career-gold);
+      flex-shrink: 0;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    }
+
+    .desk-contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .desk-contact-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: rgba(229, 169, 59, 0.15);
+      color: var(--career-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .desk-contact-icon.wa {
+      background: rgba(37, 211, 102, 0.2);
+      color: #25D366;
+    }
+
+    .desk-contact-text strong {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: rgba(255, 255, 255, 0.6);
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .desk-contact-text a {
+      color: #FFFFFF;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
+    }
+
+    .desk-contact-text a:hover {
+      color: var(--career-gold);
+    }
+
+    @media (max-width: 767.98px) {
+      .job-listing-grid {
+        grid-template-columns: 1fr;
+      }
+      .portal-form-card {
+        padding: 24px 20px;
+      }
+      .fresher-banner {
+        padding: 24px 20px;
+      }
+      .career-search-panel {
+        padding: 18px;
+      }
+    }
+
+    /* ==========================================================================
+       POLISH LAYER - missing utilities, spacing, responsive & a11y
+       ========================================================================== */
+    .bg-soft { background: linear-gradient(180deg, #F8FAFC 0%, #EEF2F7 100%); }
+    .bg-gold { background-color: var(--career-gold) !important; }
+    .text-navy-dark { color: #01122B !important; }
+    .max-w-600 { max-width: 600px; }
+    .max-w-700 { max-width: 700px; }
+    .step-hindi-label, .job-card-hindi-sub { font-family: 'Noto Sans Devanagari', var(--font-body); }
+
+    #openings, #apply, #how-to-apply { scroll-margin-top: 130px; }
+    .career-hero::after {
+      content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 4px;
+      background: linear-gradient(90deg, var(--career-gold), rgba(229, 169, 59, .3) 60%, transparent);
+    }
+    .career-hero .container-fluid { position: relative; z-index: 2; }
+    .career-hero .pg-hero-title { font-size: clamp(2rem, 4.6vw, 3.4rem); }
+    .career-hero .pg-hero-lead { font-size: 1.05rem; }
+    .hero-trust-grid { grid-template-columns: repeat(4, 1fr); }
+
+    /* Search bar */
+    .career-search-wrapper { margin-bottom: 10px; }
+    .career-search-panel { padding: 22px 26px 18px; }
+    .search-input-group { height: 100%; min-height: 52px; }
+    .search-input-group input { min-width: 0; }
+    .search-clear-btn { background: none; border: 0; color: #94A3B8; padding: 4px; line-height: 1; cursor: pointer; }
+    .search-clear-btn:hover { color: var(--career-navy); }
+    .search-select-custom { min-height: 52px; }
+    .role-chip { font-family: var(--font-body); }
+    .role-chip:focus-visible, .btn-apply-primary:focus-visible, .btn-whatsapp-apply:focus-visible,
+    .reset-filters-btn:focus-visible, .search-clear-btn:focus-visible {
+      outline: 3px solid var(--career-gold); outline-offset: 2px;
+    }
+    .results-bar {
+      display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap;
+      margin-top: 16px; padding-top: 12px; border-top: 1px solid rgba(1, 27, 64, .06);
+      font-size: .85rem; color: #64748B;
+    }
+    .reset-filters-btn {
+      background: none; border: 0; padding: 0; font-weight: 700; font-size: .85rem;
+      color: var(--career-gold-dark); cursor: pointer;
+    }
+    .reset-filters-btn:hover { color: var(--career-navy); }
+
+    /* Steps - dotted connector on desktop */
+    .step-journey-card { padding: 30px 24px 28px; }
+    @media (min-width: 992px) {
+      .step-journey-grid > div:not(:last-child) .step-journey-card::after {
+        content: ''; position: absolute; top: 56px; left: calc(100% - 4px); width: calc(1.5rem + 8px); height: 2px;
+        background: repeating-linear-gradient(90deg, var(--career-gold) 0 6px, transparent 6px 12px);
+        z-index: 1;
+      }
+    }
+
+    /* Job cards */
+    .job-listing-grid { grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 26px; }
+    @media (min-width: 1200px) { .job-listing-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (min-width: 768px) and (max-width: 1199.98px) { .job-listing-grid { grid-template-columns: repeat(2, 1fr); } }
+    .job-card-visual { height: 250px; }
+    .job-card-visual img { object-position: center top; }
+    .job-card-visual img.pos-top { object-position: center top; }
+    .job-card-title-group h3 { font-size: 1.15rem; }
+    .job-card-actions { margin-top: auto; }
+    .btn-apply-primary { min-height: 48px; }
+    .job-perks-list li { align-items: flex-start; line-height: 1.45; }
+    .job-perks-list li i { margin-top: 2px; }
+
+    /* Form + officer card */
+    .portal-form-card .form-control, .portal-form-card .form-select {
+      border: 1.5px solid rgba(1, 27, 64, .12); border-radius: 12px; background-color: #F8FAFC;
+      min-height: 48px; font-size: .93rem;
+    }
+    .portal-form-card textarea.form-control { min-height: 96px; }
+    .portal-form-card .form-control:focus, .portal-form-card .form-select:focus {
+      background-color: #fff; border-color: var(--career-gold); box-shadow: 0 0 0 4px rgba(229, 169, 59, .15);
+    }
+    .portal-form-card .form-label { margin-bottom: 6px; }
+    .officer-desk-card { top: 150px; }
+    .officer-desk-card .desk-contact-text a { word-break: break-word; }
+
+    /* Responsive */
+    @media (max-width: 991.98px) {
+      .career-hero { padding: 150px 0 90px; }
+      .hero-trust-grid { grid-template-columns: repeat(2, 1fr); }
+      .officer-desk-card { position: static; }
+    }
+    @media (max-width: 767.98px) {
+      .career-hero { padding: 135px 0 80px; }
+      .career-hero .d-flex.flex-wrap.gap-3 > a { width: 100%; justify-content: center; }
+      .hero-trust-grid { grid-template-columns: 1fr; gap: 10px; margin-top: 28px; }
+      .quick-chips-wrapper { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 6px; scrollbar-width: none; }
+      .quick-chips-wrapper::-webkit-scrollbar { display: none; }
+      .role-chip, .chip-label { flex-shrink: 0; white-space: nowrap; }
+      .job-card-visual { height: 230px; }
+      .officer-avatar-frame { width: 68px; height: 68px; font-size: 1.7rem; }
+    }
+
+    /* ---- Simplified hero (matches site banners) ---- */
+    .career-hero { background: var(--dark-navy); padding: 215px 0 120px; }
+    .career-hero::before { content: none; }
+    .career-hero::after { display: none; }
+    .career-hero.pg-hero::before { content: ''; top: auto; right: 0; left: 0; bottom: 0; width: auto; height: 4px; border-radius: 0; background: linear-gradient(90deg, var(--gold) 0%, rgba(233,191,105,.35) 60%, rgba(233,191,105,0) 100%); }
+    .career-hero.pg-hero::after {
+      display: block; content: ''; position: absolute; inset: 0; height: auto;
+      background: linear-gradient(90deg, rgba(1,27,64,.95) 0%, rgba(1,27,64,.82) 35%, rgba(1,27,64,.3) 70%, rgba(1,27,64,.05) 100%),
+                  linear-gradient(180deg, rgba(1,27,64,.35) 0%, rgba(1,27,64,0) 30%);
+    }
+    .career-hero .pg-hero-title { font-size: clamp(2rem, 4.4vw, 3.3rem); max-width: 760px; }
+    .career-hero .pg-hero-lead { max-width: 620px; font-size: 1.05rem; }
+    .career-kicker {
+      display: inline-flex; align-items: center; gap: 8px; margin-bottom: 16px;
+      font-size: .78rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--career-gold);
+    }
+    .career-hero-facts {
+      list-style: none; padding: 0; margin: 40px 0 0; display: flex; flex-wrap: wrap; gap: 10px 28px;
+      font-size: .88rem; font-weight: 700; color: rgba(255,255,255,.9);
+    }
+    .career-hero-facts i { color: var(--career-gold); margin-right: 7px; }
+    @media (max-width: 991.98px) { .career-hero { padding: 170px 0 100px; } }
+    @media (max-width: 767.98px) {
+      .career-hero { padding: 150px 0 90px; }
+      .career-hero-facts { flex-direction: column; gap: 10px; }
+    }
+
+    /* ---- Freshers banner v2 ---- */
+    .fresher-banner { padding: 0; }
+    .fresher-copy { padding: 40px 44px; position: relative; z-index: 2; }
+    .fresher-pill {
+      display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 50px; margin-bottom: 18px;
+      background: rgba(229,169,59,.16); border: 1px solid rgba(229,169,59,.45);
+      font-size: .75rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--career-gold);
+    }
+    .fresher-title { font-family: var(--font-heading); font-size: clamp(1.5rem, 2.6vw, 2.1rem); font-weight: 800; line-height: 1.25; color: #fff; margin: 0 0 10px; }
+    .fresher-title span { color: var(--career-gold); }
+    .fresher-hindi { font-family: 'Noto Sans Devanagari', var(--font-body); font-size: .95rem; font-weight: 600; color: rgba(255,255,255,.75); margin: 0 0 22px; }
+    .fresher-perks { list-style: none; padding: 0; margin: 0 0 28px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 20px; }
+    .fresher-perks li { display: flex; align-items: center; gap: 10px; font-size: .9rem; font-weight: 600; color: #fff; }
+    .fresher-perks li i {
+      flex-shrink: 0; width: 34px; height: 34px; border-radius: 10px; display: flex; align-items: center; justify-content: center;
+      background: rgba(229,169,59,.16); color: var(--career-gold); font-size: 1rem;
+    }
+    .fresher-visual { position: relative; min-height: 280px; }
+    .fresher-visual img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+    .fresher-visual::before {
+      content: ''; position: absolute; inset: 0; z-index: 1;
+      background: linear-gradient(90deg, #031f4a 0%, rgba(3,31,74,.55) 28%, rgba(3,31,74,0) 60%);
+    }
+    .fresher-float {
+      position: absolute; z-index: 2; right: 20px; bottom: 20px; display: inline-flex; align-items: center; gap: 8px;
+      padding: 9px 16px; border-radius: 50px; background: #fff; color: var(--career-navy);
+      font-size: .8rem; font-weight: 800; box-shadow: 0 8px 24px rgba(0,0,0,.25);
+    }
+    .fresher-float i { color: #059669; }
+    @media (max-width: 991.98px) {
+      .fresher-visual { min-height: 220px; order: -1; }
+      .fresher-visual::before { background: linear-gradient(180deg, rgba(3,31,74,0) 40%, #031f4a 100%); }
+      .fresher-copy { padding: 28px 22px 30px; }
+    }
+    @media (max-width: 575.98px) { .fresher-perks { grid-template-columns: 1fr; } .fresher-copy .btn-custom { width: 100%; justify-content: center; } }
+    #openings { padding-top: 56px; margin-top: -10px; }
+    #openings > .container-fluid > .d-flex { margin-bottom: 2rem !important; }
+  </style>
+</head>
+
+<body data-page="careers">
+
+  <!-- Main Shared Layout Header -->
+  <script>AbhithLayout.render('header');</script>
+
+  <main>
+
+    <!-- ==========================================================================
+         CAREER HERO SECTION
+         ========================================================================== -->
+    <section class="pg-hero career-hero">
+      <div class="pg-hero-bg" style="background-image: url('assets/images/abhith-security/abhith-traing-hero.jpg'); background-position: center 30%;"></div>
+      <div class="container-fluid px-lg-5">
+        <nav aria-label="Breadcrumb">
+          <ol class="pg-breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li aria-current="page">Careers &amp; Job Openings</li>
+          </ol>
+        </nav>
+
+        <span class="career-kicker"><i class="bi bi-shield-fill-check"></i> We&rsquo;re Hiring &bull; 100% Free Recruitment</span>
+        <h1 class="pg-hero-title">Build Your Career With <span class="hero-text-gold">Team Abhith</span></h1>
+        <p class="pg-hero-lead">
+          Security guards, PSOs, bouncers, drivers and facility staff wanted across Assam, Noida and Jaipur.
+          Freshers welcome &mdash; salary on the 7th, PF &amp; ESIC, free uniform and training.
+        </p>
+
+        <div class="d-flex flex-wrap gap-3 mt-4">
+          <a href="#openings" class="btn-custom btn-custom-gold">
+            View 8 Job Openings
+            <svg class="btn-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+          <a href="https://wa.me/918453967564?text=Hello%20Team%20Abhith,%20I%20want%20to%20apply%20for%20a%20Job."
+             target="_blank" rel="noopener" class="btn-custom btn-custom-outline-white">
+            <i class="bi bi-whatsapp me-2"></i> WhatsApp Quick Apply
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SMART SEARCH & INTERACTIVE FILTER COMMAND CENTER
+         ========================================================================== -->
+    <div class="container-fluid px-lg-5 career-search-wrapper" id="jobSearchSuite">
+      <div class="career-search-panel">
+        
+        <!-- Primary Filter Row -->
+        <div class="row g-3 align-items-center">
+          
+          <!-- Keyword Search -->
+          <div class="col-lg-4 col-md-12">
+            <div class="search-input-group">
+              <i class="bi bi-search text-gold me-2 fs-5"></i>
+              <input type="text" id="jobSearchInput" placeholder="Search by role (e.g., Security Guard, Driver, Housekeeper...)"
+                     oninput="filterAllJobs()" onkeydown="if(event.key==='Enter'){event.preventDefault();filterAllJobs(true);}" aria-label="Search job roles" autocomplete="off">
+              <button type="button" class="search-clear-btn" onclick="clearSearch()" title="Clear search" aria-label="Clear search">
+                <i class="bi bi-x-circle-fill"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Category Selector -->
+          <div class="col-lg-3 col-md-4">
+            <select class="form-select search-select-custom" id="categoryFilter" aria-label="Category" onchange="filterAllJobs(true)">
+              <option value="all">All Categories</option>
+              <option value="security">Security Manpower</option>
+              <option value="facility">Facility Management</option>
+            </select>
+          </div>
+
+          <!-- Experience Selector -->
+          <div class="col-lg-3 col-md-4">
+            <select class="form-select search-select-custom" id="experienceFilter" aria-label="Experience level" onchange="filterAllJobs(true)">
+              <option value="all">All Experience Levels</option>
+              <option value="fresher">Freshers (0 Experience)</option>
+              <option value="experienced">Experienced / Licensed</option>
+            </select>
+          </div>
+
+          <!-- Hub Location Selector -->
+          <div class="col-lg-2 col-md-4">
+            <select class="form-select search-select-custom" id="locationFilter" aria-label="Location hub" onchange="filterAllJobs(true)">
+              <option value="all">All Hubs</option>
+              <option value="guwahati">Guwahati (HQ)</option>
+              <option value="noida">Noida (NCR)</option>
+              <option value="jaipur">Jaipur</option>
+            </select>
+          </div>
+
+        </div>
+
+        <!-- Quick One-Click Role Tap-Chips -->
+        <div class="quick-chips-wrapper">
+          <span class="chip-label"><i class="bi bi-lightning-charge-fill text-gold me-1"></i> Quick Filters:</span>
+          <button type="button" class="role-chip active" data-chip="all" onclick="selectChip('all')">
+            All Openings (8)
+          </button>
+          <button type="button" class="role-chip" data-chip="guard" onclick="selectChip('guard')">
+            <i class="bi bi-shield-check"></i> Security Guard
+          </button>
+          <button type="button" class="role-chip" data-chip="pso" onclick="selectChip('pso')">
+            <i class="bi bi-shield-shaded"></i> PSO / Gunman
+          </button>
+          <button type="button" class="role-chip" data-chip="bouncer" onclick="selectChip('bouncer')">
+            <i class="bi bi-person-fill-lock"></i> Bouncer
+          </button>
+          <button type="button" class="role-chip" data-chip="supervisor" onclick="selectChip('supervisor')">
+            <i class="bi bi-clipboard-check"></i> Supervisor
+          </button>
+          <button type="button" class="role-chip" data-chip="manager" onclick="selectChip('manager')">
+            <i class="bi bi-building"></i> Building Manager
+          </button>
+          <button type="button" class="role-chip" data-chip="housekeeper" onclick="selectChip('housekeeper')">
+            <i class="bi bi-house-check"></i> Housekeeping
+          </button>
+          <button type="button" class="role-chip" data-chip="janitor" onclick="selectChip('janitor')">
+            <i class="bi bi-stars"></i> Janitor
+          </button>
+          <button type="button" class="role-chip" data-chip="driver" onclick="selectChip('driver')">
+            <i class="bi bi-car-front-fill"></i> Driver
+          </button>
+          <button type="button" class="role-chip" data-chip="freshers" onclick="selectChip('freshers')">
+            <i class="bi bi-award-fill text-success"></i> Freshers (0 Exp)
+          </button>
+        </div>
+
+        <!-- Dynamic Results Counter -->
+        <div class="results-bar">
+          <div id="resultsCount" aria-live="polite">
+            <strong class="text-navy" id="activeCount">Showing 8 verified openings</strong> &bull; Free recruitment by Team Abhith Group
+          </div>
+          <button type="button" class="reset-filters-btn" onclick="resetAllFilters()">
+            <i class="bi bi-arrow-counterclockwise me-1"></i> Reset Filters
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+         8 VERIFIED JOB VACANCIES (FACILITY MANAGEMENT & SECURITY MANPOWER)
+         ========================================================================== -->
+    <section class="pg-section bg-soft" id="openings">
+      <div class="container-fluid px-lg-5">
+
+        <div class="d-flex justify-content-between align-items-end flex-wrap gap-3 mb-5 reveal-up">
+          <div>
+            <div class="eyebrow-tag navy mb-2">VERIFIED POSITIONS &bull; सक्रिय रिक्तियां</div>
+            <h2 class="section-title text-navy mb-1">Available Job Openings</h2>
+            <p class="text-muted mb-0">
+              Immediate joining available across Guwahati (HQ), Noida, Jaipur, and pan-India project sites.
+            </p>
+          </div>
+          </div>
+
+        <div class="job-listing-grid" id="jobGrid">
+
+          <!-- ROLE 1: SECURITY GUARDS (MALE & FEMALE) -->
+          <div class="luxury-job-card" 
+               data-category="security" 
+               data-exp="fresher" 
+               data-role="guard" 
+               data-location="guwahati noida jaipur all"
+               data-search="security guard male female fresher 0 exp guwahati noida jaipur passbook uniform">
+            <div class="job-card-visual">
+              <img src="assets/images/security/professional-security-entrance.webp" alt="Security Guards Male and Female">
+              <div class="job-card-visual-overlay"></div>
+              <span class="job-floating-tag"><i class="bi bi-shield-check me-1"></i> Security Manpower</span>
+            </div>
+            <div class="job-card-main">
+              <div class="job-card-title-group">
+                <h3>Security Guards – Male &amp; Female</h3>
+                <span class="job-card-hindi-sub">सुरक्षा गार्ड (महिला एवं पुरुष) &bull; Freshers Welcome</span>
+              </div>
+              <div class="job-meta-chips">
+                <span class="meta-chip highlight-green"><i class="bi bi-stars"></i> Fresher (0 Exp) OK</span>
+                <span class="meta-chip"><i class="bi bi-geo-alt"></i> Guwahati | Noida | Jaipur</span>
+                <span class="meta-chip"><i class="bi bi-clock"></i> 8 / 12 Hr Shifts</span>
+                <span class="meta-chip highlight-gold"><i class="bi bi-cash-stack"></i> PF + ESIC + Bonus</span>
+              </div>
+              <p class="job-desc-snippet">
+                Responsible for gate access control, visitor register logging, perimeter patrolling, and reporting irregular activities across commercial, residential, and corporate facilities.
+              </p>
+              <ul class="job-perks-list">
+                <li><i class="bi bi-check-circle-fill"></i> Minimum height: 5'6" (Male) / 5'2" (Female)</li>
+                <li><i class="bi bi-check-circle-fill"></i> Free uniform kit, boots, belt &amp; badge provided</li>
+                <li><i class="bi bi-check-circle-fill"></i> Full PSARA-certified training provided at onboarding</li>
+              </ul>
+              <div class="job-card-actions">
+                <button type="button" class="btn-apply-primary" onclick="selectRoleAndApply('Security Guards – Male & Female')">
+                  Apply Now / आवेदन करें <i class="bi bi-arrow-right"></i>
+                </button>
+                <a href="https://wa.me/918453967564?text=Hello%20Team%20Abhith,%20I%20want%20to%20apply%20for%20Security%20Guard%20Job." 
+                   target="_blank" rel="noopener" class="btn-whatsapp-apply" title="Apply on WhatsApp">
+                  <i class="bi bi-whatsapp"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ROLE 2: PSO – ARMED / LICENSED GUNMAN -->
+          <div class="luxury-job-card" 
+               data-category="security" 
+               data-exp="experienced" 
+               data-role="pso" 
+               data-location="guwahati noida jaipur all"
+               data-search="pso personal security officer armed gunman licensed gun license ex army servicemen police weapon">
+            <div class="job-card-visual">
+              <img class="pos-top" src="assets/images/security/professional-pso-guard.png" alt="PSO Armed Gunman">
+              <div class="job-card-visual-overlay"></div>
+              <span class="job-floating-tag"><i class="bi bi-shield-check me-1"></i> Security Manpower</span>
+            </div>
+            <div class="job-card-main">
+              <div class="job-card-title-group">
+                <h3>PSO – Armed / Licensed Gunman</h3>
+                <span class="job-card-hindi-sub">सशस्त्र पीएसओ / गनमैन &bull; Ex-Servicemen Preferred</span>
+              </div>
+              <div class="job-meta-chips">
+                <span class="meta-chip highlight-gold"><i class="bi bi-award-fill"></i> Valid Gun License</span>
+                <span class="meta-chip"><i class="bi bi-geo-alt"></i> Pan-India / Executive</span>
+                <span class="meta-chip"><i class="bi bi-clock"></i> Day / Night Shifts</span>
+                <span class="meta-chip highlight-green"><i class="bi bi-cash-stack"></i> High Pay + Allowances</span>
+              </div>
+              <p class="job-desc-snippet">
+                Executive close protection, cash-in-transit escort, and high-profile dignitary security. Must possess a valid arms license and defensive tactical awareness.
+              </p>
+              <ul class="job-perks-list">
+                <li><i class="bi bi-check-circle-fill"></i> Valid State or All-India Arms License required</li>
+                <li><i class="bi bi-check-circle-fill"></i> Ex-Army, Navy, Air Force, or Police given top priority</li>
+                <li><i class="bi bi-check-circle-fill"></i> Excellent executive presence &amp; disciplined conduct</li>
+              </ul>
+              <div class="job-card-actions">
+                <button type="button" class="btn-apply-primary" onclick="selectRoleAndApply('PSO – Armed / Licensed Gunman')">
+                  Apply Now / आवेदन करें <i class="bi bi-arrow-right"></i>
+                </button>
+                <a href="https://wa.me/918453967564?text=Hello%20Team%20Abhith,%20I%20want%20to%20apply%20for%20PSO%20Armed%20Gunman%20Role." 
+                   target="_blank" rel="noopener" class="btn-whatsapp-apply" title="Apply on WhatsApp">
+                  <i class="bi bi-whatsapp"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ROLE 3: BOUNCER & UNARMED BODYGUARD -->
+          <div class="luxury-job-card" 
+               data-category="security" 
+               data-exp="fresher" 
+               data-role="bouncer" 
+               data-location="guwahati noida jaipur all"
+               data-search="bouncer unarmed bodyguard physique gym fitness club event crowd control vip protection">
+            <div class="job-card-visual">
+              <img src="assets/images/security/professional-security-team.webp" alt="Bouncers and Bodyguards">
+              <div class="job-card-visual-overlay"></div>
+              <span class="job-floating-tag"><i class="bi bi-shield-check me-1"></i> Security Manpower</span>
+            </div>
+            <div class="job-card-main">
+              <div class="job-card-title-group">
+                <h3>Bouncer &amp; Unarmed Bodyguard</h3>
+                <span class="job-card-hindi-sub">बाउंसर एवं बॉडीगार्ड &bull; Physique Freshers Welcome</span>
+              </div>
+              <div class="job-meta-chips">
+                <span class="meta-chip highlight-green"><i class="bi bi-person-fill"></i> Height 5'10"+</span>
+                <span class="meta-chip"><i class="bi bi-geo-alt"></i> Event &amp; Corporate Sites</span>
+                <span class="meta-chip"><i class="bi bi-clock"></i> Evening / Flexible Shifts</span>
+                <span class="meta-chip highlight-gold"><i class="bi bi-cash-stack"></i> Event Pay + Bonus</span>
+              </div>
+              <p class="job-desc-snippet">
+                Crowd containment, VIP venue protection, screening at entry gates, and rapid peaceful dispute de-escalation for corporate galas, clubs, and luxury gatherings.
+              </p>
+              <ul class="job-perks-list">
+                <li><i class="bi bi-check-circle-fill"></i> Strong athletic physique; fitness / gym background welcome</li>
+                <li><i class="bi bi-check-circle-fill"></i> Freshers with good height &amp; build can apply directly</li>
+                <li><i class="bi bi-check-circle-fill"></i> Professional black suit / tactical uniform provided</li>
+              </ul>
+              <div class="job-card-actions">
+                <button type="button" class="btn-apply-primary" onclick="selectRoleAndApply('Bouncer & Unarmed Bodyguard')">
+                  Apply Now / आवेदन करें <i class="bi bi-arrow-right"></i>
+                </button>
+                <a href="https://wa.me/918453967564?text=Hello%20Team%20Abhith,%20I%20want%20to%20apply%20for%20Bouncer%20Job." 
+                   target="_blank" rel="noopener" class="btn-whatsapp-apply" title="Apply on WhatsApp">
+                  <i class="bi bi-whatsapp"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ROLE 4: SECURITY SUPERVISOR / FIELD OFFICER -->
+          <div class="luxury-job-card" 
+               data-category="security" 
+               data-exp="experienced" 
+               data-role="supervisor" 
+               data-location="guwahati noida all"
+               data-search="security supervisor field officer guard management muster roll client coordinator shift leader">
+            <div class="job-card-visual">
+              <img class="pos-top" src="assets/images/security/abhith-security-guards-team-lobby.jpg" alt="Security Supervisor Field Officer">
+              <div class="job-card-visual-overlay"></div>
+              <span class="job-floating-tag"><i class="bi bi-shield-check me-1"></i> Security Manpower</span>
+            </div>
+            <div class="job-card-main">
+              <div class="job-card-title-group">
+                <h3>Security Supervisor / Field Officer</h3>
+                <span class="job-card-hindi-sub">सिक्योरिटी सुपरवाइजर / फील्ड ऑफिसर</span>
+              </div>
+              <div class="job-meta-chips">
+                <span class="meta-chip highlight-gold"><i class="bi bi-briefcase-fill"></i> 1 to 3 Yrs Exp</span>
+                <span class="meta-chip"><i class="bi bi-geo-alt"></i> Guwahati / Noida Hubs</span>
+                <span class="meta-chip"><i class="bi bi-mortarboard-fill"></i> 12th Pass / Graduate</span>
+                <span class="meta-chip highlight-green"><i class="bi bi-cash-stack"></i> PF + ESIC + TA/DA</span>
+              </div>
+              <p class="job-desc-snippet">
+                Overseeing guard deployment, shift handovers, conducting unexpected night patrolling checks, maintaining attendance registers, and acting as primary contact for client security heads.
+              </p>
+              <ul class="job-perks-list">
+                <li><i class="bi bi-check-circle-fill"></i> 1+ years supervisory experience in security agencies</li>
+                <li><i class="bi bi-check-circle-fill"></i> Valid two-wheeler driving license required</li>
+                <li><i class="bi bi-check-circle-fill"></i> Leadership skills to motivate and manage 20-50 guards</li>
+              </ul>
+              <div class="job-card-actions">
+                <button type="button" class="btn-apply-primary" onclick="selectRoleAndApply('Security Supervisor / Field Officer')">
+                  Apply Now / आवेदन करें <i class="bi bi-arrow-right"></i>
+                </button>
+                <a href="https://wa.me/918453967564?text=Hello%20Team%20Abhith,%20I%20want%20to%20apply%20for%20Security%20Supervisor%20Role." 
+                   target="_blank" rel="noopener" class="btn-whatsapp-apply" title="Apply on WhatsApp">
+                  <i class="bi bi-whatsapp"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ROLE 5: CORPORATE HOUSEKEEPERS (MALE & FEMALE) -->
+          <div class="luxury-job-card" 
+               data-category="facility" 
+               data-exp="fresher" 
+               data-role="housekeeper" 
+               data-location="guwahati noida jaipur all"
+               data-search="corporate housekeeper housekeeping cleaning male female cleaner office hospital sanitization">
+            <div class="job-card-visual">
+              <img src="assets/images/security/professional-housekeeping-team.webp" alt="Corporate Housekeepers">
+              <div class="job-card-visual-overlay"></div>
+              <span class="job-floating-tag" style="background: rgba(14, 116, 144, 0.9);"><i class="bi bi-building-gear me-1"></i> Facility Management</span>
+            </div>
+            <div class="job-card-main">
+              <div class="job-card-title-group">
+                <h3>Corporate Housekeepers – Male &amp; Female</h3>
+                <span class="job-card-hindi-sub">हाउसकीपिंग स्टाफ (महिला एवं पुरुष) &bull; No Experience Needed</span>
+              </div>
+              <div class="job-meta-chips">
+                <span class="meta-chip highlight-green"><i class="bi bi-stars"></i> Freshers Welcome</span>
+                <span class="meta-chip"><i class="bi bi-geo-alt"></i> Corporate Parks &amp; IT Hubs</span>
+                <span class="meta-chip"><i class="bi bi-clock"></i> 8-Hour General Shift</span>
+                <span class="meta-chip highlight-gold"><i class="bi bi-cash-stack"></i> Salary + PF + ESIC</span>
+              </div>
+              <p class="job-desc-snippet">
+                Daily cleaning, dusting, workstation sanitization, pantry assistance, and restroom maintenance across premier corporate offices, banks, and IT campuses.
+              </p>
+              <ul class="job-perks-list">
+                <li><i class="bi bi-check-circle-fill"></i> No prior experience required; age 18 to 45</li>
+                <li><i class="bi bi-check-circle-fill"></i> Hands-on training on eco-friendly cleaning chemicals</li>
+                <li><i class="bi bi-check-circle-fill"></i> Company uniform, apron, gloves &amp; footwear provided</li>
+              </ul>
+              <div class="job-card-actions">
+                <button type="button" class="btn-apply-primary" onclick="selectRoleAndApply('Corporate Housekeepers (Male & Female)')">
+                  Apply Now / आवेदन करें <i class="bi bi-arrow-right"></i>
+                </button>
+                <a href="https://wa.me/918453967564?text=Hello%20Team%20Abhith,%20I%20want%20to%20apply%20for%20Corporate%20Housekeeping%20Job." 
+                   target="_blank" rel="noopener" class="btn-whatsapp-apply" title="Apply on WhatsApp">
+                  <i class="bi bi-whatsapp"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ROLE 6: JANITORIAL STAFF & DEEP CLEANERS -->
+          <div class="luxury-job-card" 
+               data-category="facility" 
+               data-exp="fresher" 
+               data-role="janitor" 
+               data-location="guwahati noida jaipur all"
+               data-search="janitor janitorial cleaning deep cleaner scrubbing machine single disc floor polish mall commercial">
+            <div class="job-card-visual">
+              <img src="assets/images/facility-management/professional-housekeeping-team.webp" alt="Janitorial Staff and Deep Cleaners">
+              <div class="job-card-visual-overlay"></div>
+              <span class="job-floating-tag" style="background: rgba(14, 116, 144, 0.9);"><i class="bi bi-building-gear me-1"></i> Facility Management</span>
+            </div>
+            <div class="job-card-main">
+              <div class="job-card-title-group">
+                <h3>Janitorial Staff &amp; Deep Cleaners</h3>
+                <span class="job-card-hindi-sub">सफाई कर्मचारी / डीप क्लीनर &bull; Machine Training Free</span>
+              </div>
+              <div class="job-meta-chips">
+                <span class="meta-chip highlight-green"><i class="bi bi-stars"></i> Freshers Welcome</span>
+                <span class="meta-chip"><i class="bi bi-geo-alt"></i> Malls &amp; Commercial Towers</span>
+                <span class="meta-chip"><i class="bi bi-gear-fill"></i> Machine Operations</span>
+                <span class="meta-chip highlight-gold"><i class="bi bi-cash-stack"></i> Salary + PF + Overtime</span>
+              </div>
+              <p class="job-desc-snippet">
+                Industrial deep cleaning, mechanized floor scrubbing (single-disc &amp; auto-scrubbers), high-pressure facade washing, and hygiene waste segregation.
+              </p>
+              <ul class="job-perks-list">
+                <li><i class="bi bi-check-circle-fill"></i> Freshers welcome; physical fitness required</li>
+                <li><i class="bi bi-check-circle-fill"></i> Free training on industrial floor-scrubbing machines</li>
+                <li><i class="bi bi-check-circle-fill"></i> Complete PPE kit, gloves, masks &amp; uniform included</li>
+              </ul>
+              <div class="job-card-actions">
+                <button type="button" class="btn-apply-primary" onclick="selectRoleAndApply('Janitorial Staff & Deep Cleaners')">
+                  Apply Now / आवेदन करें <i class="bi bi-arrow-right"></i>
+                </button>
+                <a href="https://wa.me/918453967564?text=Hello%20Team%20Abhith,%20I%20want%20to%20apply%20for%20Janitorial%20Cleaner%20Job." 
+                   target="_blank" rel="noopener" class="btn-whatsapp-apply" title="Apply on WhatsApp">
+                  <i class="bi bi-whatsapp"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ROLE 7: PROFESSIONAL DRIVERS (EXECUTIVE & FLEET) -->
+          <div class="luxury-job-card" 
+               data-category="facility" 
+               data-exp="experienced" 
+               data-role="driver" 
+               data-location="guwahati noida all"
+               data-search="driver driving license lmv commercial fleet chauffeur executive car vehicle transport">
+            <div class="job-card-visual">
+              <img class="pos-top" src="assets/images/facility-management/abhith-professional-driver.png" alt="Professional Driver Executive">
+              <div class="job-card-visual-overlay"></div>
+              <span class="job-floating-tag" style="background: rgba(14, 116, 144, 0.9);"><i class="bi bi-building-gear me-1"></i> Facility Management</span>
+            </div>
+            <div class="job-card-main">
+              <div class="job-card-title-group">
+                <h3>Professional Drivers – Executive &amp; Fleet</h3>
+                <span class="job-card-hindi-sub">प्रोफेशनल ड्राइवर &bull; Valid Driving License</span>
+              </div>
+              <div class="job-meta-chips">
+                <span class="meta-chip highlight-gold"><i class="bi bi-card-text"></i> Valid LMV/TR License</span>
+                <span class="meta-chip"><i class="bi bi-geo-alt"></i> Guwahati / Delhi NCR</span>
+                <span class="meta-chip"><i class="bi bi-briefcase-fill"></i> 2+ Yrs Experience</span>
+                <span class="meta-chip highlight-green"><i class="bi bi-cash-stack"></i> Salary + Trip Allowance</span>
+              </div>
+              <p class="job-desc-snippet">
+                Executive chauffeuring for corporate leaders, fleet logistics, vehicle health inspections, prompt punctuality, and route navigation with defensive driving habits.
+              </p>
+              <ul class="job-perks-list">
+                <li><i class="bi bi-check-circle-fill"></i> Valid commercial or LMV driving license with clean record</li>
+                <li><i class="bi bi-check-circle-fill"></i> Police verification &amp; background check mandatory</li>
+                <li><i class="bi bi-check-circle-fill"></i> Smart driver uniform &amp; cap provided by company</li>
+              </ul>
+              <div class="job-card-actions">
+                <button type="button" class="btn-apply-primary" onclick="selectRoleAndApply('Professional Drivers (Executive / Fleet)')">
+                  Apply Now / आवेदन करें <i class="bi bi-arrow-right"></i>
+                </button>
+                <a href="https://wa.me/918453967564?text=Hello%20Team%20Abhith,%20I%20want%20to%20apply%20for%20Professional%20Driver%20Role." 
+                   target="_blank" rel="noopener" class="btn-whatsapp-apply" title="Apply on WhatsApp">
+                  <i class="bi bi-whatsapp"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ROLE 8: BUILDING MANAGER / FACILITY EXECUTIVE -->
+          <div class="luxury-job-card" 
+               data-category="facility" 
+               data-exp="experienced" 
+               data-role="manager" 
+               data-location="guwahati noida jaipur all"
+               data-search="building manager facility executive operations property management amc vendor maintenance supervisor">
+            <div class="job-card-visual">
+              <img class="pos-top" src="assets/images/facility-management/professional%20building-manager-portrait.webp" alt="Building Manager Facility Executive">
+              <div class="job-card-visual-overlay"></div>
+              <span class="job-floating-tag" style="background: rgba(14, 116, 144, 0.9);"><i class="bi bi-building-gear me-1"></i> Facility Management</span>
+            </div>
+            <div class="job-card-main">
+              <div class="job-card-title-group">
+                <h3>Building Manager / Facility Executive</h3>
+                <span class="job-card-hindi-sub">बिल्डिंग मैनेजर / फैसिलिटी एग्जीक्यूटिव</span>
+              </div>
+              <div class="job-meta-chips">
+                <span class="meta-chip highlight-gold"><i class="bi bi-briefcase-fill"></i> 2+ Yrs Experience</span>
+                <span class="meta-chip"><i class="bi bi-geo-alt"></i> Commercial Tech Parks</span>
+                <span class="meta-chip"><i class="bi bi-mortarboard-fill"></i> Diploma / Degree</span>
+                <span class="meta-chip highlight-green"><i class="bi bi-cash-stack"></i> Attractive Package</span>
+              </div>
+              <p class="job-desc-snippet">
+                Comprehensive oversight of building operations, soft &amp; hard facility maintenance, vendor contract AMC tracking, energy management, and tenant grievance handling.
+              </p>
+              <ul class="job-perks-list">
+                <li><i class="bi bi-check-circle-fill"></i> Degree/Diploma with 2+ years facility or property experience</li>
+                <li><i class="bi bi-check-circle-fill"></i> Working knowledge of MEP, DG sets, HVAC, and fire systems</li>
+                <li><i class="bi bi-check-circle-fill"></i> Strong client relationship and vendor management skills</li>
+              </ul>
+              <div class="job-card-actions">
+                <button type="button" class="btn-apply-primary" onclick="selectRoleAndApply('Building Manager / Facility Executive')">
+                  Apply Now / आवेदन करें <i class="bi bi-arrow-right"></i>
+                </button>
+                <a href="https://wa.me/918453967564?text=Hello%20Team%20Abhith,%20I%20want%20to%20apply%20for%20Building%20Manager%20Role." 
+                   target="_blank" rel="noopener" class="btn-whatsapp-apply" title="Apply on WhatsApp">
+                  <i class="bi bi-whatsapp"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- No Results Fallback Notice -->
+        <div id="noResultsNotice" class="text-center py-5 d-none">
+          <div class="p-5 bg-white rounded-4 shadow-sm max-w-600 mx-auto border">
+            <i class="bi bi-search text-gold display-4 mb-3 d-block"></i>
+            <h4 class="fw-bold text-navy mb-2">No Openings Match Your Filter</h4>
+            <p class="text-muted small mb-4">
+              Try searching with another keyword (e.g. "Guard", "Driver", "Housekeeper") or reset your filters.
+            </p>
+            <button class="btn-custom btn-custom-gold" onclick="resetAllFilters()">
+              Reset All Filters (सभी 8 नौकरियां देखें)
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         HOW SECURITY GUARDS & FACILITY STAFF CAN APPLY (EASY 4-STEP ROADMAP)
+         ========================================================================== -->
+    <section class="pg-section" id="how-to-apply">
+      <div class="container-fluid px-lg-5">
+        
+        <div class="text-center mb-5 reveal-up">
+          <div class="eyebrow-tag navy mb-2">SIMPLE 4-STEP PROCESS &bull; सरल आवेदन प्रक्रिया</div>
+          <h2 class="section-title text-navy mb-2">How Guards &amp; Staff Can Apply</h2>
+          <p class="text-muted max-w-700 mx-auto">
+            You do not need complicated resumes or computer skills. Follow these 4 easy steps or reach our recruitment team directly on phone or WhatsApp!
+          </p>
+        </div>
+
+        <div class="row g-4 step-journey-grid">
+          
+          <!-- Step 1 -->
+          <div class="col-lg-3 col-md-6 reveal-up">
+            <div class="step-journey-card">
+              <div class="step-number-badge">01</div>
+              <h4>Pick Your Role</h4>
+              <span class="step-hindi-label">पद का चयन करें</span>
+              <p>
+                Browse the 8 active openings below (Security Guard, PSO, Bouncer, Driver, Housekeeper) and pick the role that matches your interest.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="col-lg-3 col-md-6 reveal-up" style="--stagger-delay: 0.1s;">
+            <div class="step-journey-card">
+              <div class="step-number-badge">02</div>
+              <h4>1-Min Form or Call</h4>
+              <span class="step-hindi-label">1 मिनट में फॉर्म भरें या सीधे कॉल करें</span>
+              <p>
+                Fill your basic name &amp; phone in our 1-minute form below, or directly click WhatsApp or call our HR recruitment desk at <strong>+91-84539-67564</strong>.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="col-lg-3 col-md-6 reveal-up" style="--stagger-delay: 0.2s;">
+            <div class="step-journey-card">
+              <div class="step-number-badge">03</div>
+              <h4>Free Verification</h4>
+              <span class="step-hindi-label">मुफ्त दस्तावेज जांच व इंटरव्यू</span>
+              <p>
+                Visit our nearest hub with your Aadhaar card and Bank Passbook. <strong>100% Free</strong> — Abhith never asks for any fees or security deposit.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="col-lg-3 col-md-6 reveal-up" style="--stagger-delay: 0.3s;">
+            <div class="step-journey-card">
+              <div class="step-number-badge">04</div>
+              <h4>Uniform, Training &amp; Duty</h4>
+              <span class="step-hindi-label">वर्दी, ट्रेनिंग और तुरंत ड्यूटी</span>
+              <p>
+                Receive your free company uniform kit, PSARA-certified training, and direct posting with guaranteed salary, PF, and ESIC healthcare from Day 1.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Fresher / No Experience Explanation Banner -->
+        <div class="fresher-banner reveal-up">
+          <div class="row g-0 align-items-stretch">
+            <div class="col-lg-7 fresher-copy">
+              <span class="fresher-pill"><i class="bi bi-stars"></i> No Prior Experience? No Problem!</span>
+              <h3 class="fresher-title">Never worked as a guard or housekeeper? <span>You can still apply.</span></h3>
+              <p class="fresher-hindi">फ्रेशर्स के लिए पूरी ट्रेनिंग और तुरंत जॉइनिंग की सुविधा</p>
+              <ul class="fresher-perks">
+                <li><i class="bi bi-mortarboard-fill"></i> Free on-the-job training</li>
+                <li><i class="bi bi-person-badge-fill"></i> Uniform kit &amp; ID card</li>
+                <li><i class="bi bi-heart-pulse-fill"></i> PF &amp; ESIC from Day 1</li>
+                <li><i class="bi bi-file-earmark-check-fill"></i> Only Aadhaar needed</li>
+              </ul>
+              <a href="#openings" class="btn-custom btn-custom-gold" onclick="selectChip('freshers', false)">
+                View Freshers Roles (4)
+                <svg class="btn-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+            <div class="col-lg-5 fresher-visual">
+              <img src="assets/images/abhith-security/class-room.webp" alt="Abhith guard training classroom" loading="lazy">
+              <span class="fresher-float"><i class="bi bi-patch-check-fill"></i> 100% Free &bull; No Fees</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    
+
+    <!-- ==========================================================================
+         FAST-TRACK JOB APPLICATION FORM & RECRUITMENT DESK (MR. KK JI)
+         ========================================================================== -->
+    <section class="pg-section" id="apply">
+      <div class="container-fluid px-lg-5">
+
+        <div class="row g-4 g-lg-5 align-items-start">
+          
+          <!-- Left: 1-Minute Fast Track Application Form -->
+          <div class="col-lg-7 reveal-up">
+            <div class="portal-form-card" id="applyFormCard">
+              <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-2">
+                <div>
+                  <span class="badge bg-gold text-navy-dark px-3 py-1 rounded-pill fw-bold mb-1" style="font-size:0.75rem;">
+                    FAST-TRACK HIRING &bull; 1-MINUTE APPLICATION
+                  </span>
+                  <h3 class="fw-bold text-navy mb-0">Direct Job Application Form</h3>
+                </div>
+                <span class="text-muted small">सरल आवेदन पत्र</span>
+              </div>
+              <p class="text-muted small mb-4">
+                Please fill in your basic details. Our HR team will call you within 24 hours. (सभी विवरण भरें, हमारी टीम आपको तुरंत संपर्क करेगी।)
+              </p>
+
+              <form id="jobApplicationForm" class="needs-validation" novalidate onsubmit="handleJobSubmit(event)">
+                <div class="row g-3">
+                  
+                  <!-- Full Name -->
+                  <div class="col-md-6">
+                    <label for="appName" class="form-label fw-bold text-navy small">Full Name / पूरा नाम <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control py-2" id="appName" name="name" placeholder="e.g. Ramesh Kumar" required>
+                    <div class="invalid-feedback">कृपया अपना पूरा नाम लिखें (Please enter your name).</div>
+                  </div>
+
+                  <!-- Mobile Number -->
+                  <div class="col-md-6">
+                    <label for="appPhone" class="form-label fw-bold text-navy small">Mobile Number / मोबाइल नंबर <span class="text-danger">*</span></label>
+                    <input type="tel" class="form-control py-2" id="appPhone" name="phone" placeholder="e.g. 9876543210" pattern="[0-9]{10}" required>
+                    <div class="invalid-feedback">कृपया 10 अंकों का मोबाइल नंबर डालें (10-digit mobile number).</div>
+                  </div>
+
+                  <!-- Job Role Selected -->
+                  <div class="col-md-6">
+                    <label for="appRole" class="form-label fw-bold text-navy small">Applying For Role / पद चुनें <span class="text-danger">*</span></label>
+                    <select class="form-select py-2" id="appRole" name="role" required>
+                      <option value="" selected disabled>Select the position you want to apply for</option>
+                      <option value="Security Guards – Male & Female">Security Guards – Male &amp; Female (सुरक्षा गार्ड)</option>
+                      <option value="PSO – Armed / Licensed Gunman">PSO – Armed / Licensed Gunman (गनमैन / PSO)</option>
+                      <option value="Bouncer & Unarmed Bodyguard">Bouncer &amp; Unarmed Bodyguard (बाउंसर)</option>
+                      <option value="Security Supervisor / Field Officer">Security Supervisor / Field Officer (सुपरवाइजर)</option>
+                      <option value="Corporate Housekeepers (Male & Female)">Corporate Housekeepers (हाउसकीपिंग)</option>
+                      <option value="Janitorial Staff & Deep Cleaners">Janitorial Staff &amp; Deep Cleaners (सफाई कर्मचारी)</option>
+                      <option value="Professional Drivers (Executive / Fleet)">Professional Drivers (प्रोफेशनल ड्राइवर)</option>
+                      <option value="Building Manager / Facility Executive">Building Manager / Facility Executive (बिल्डिंग मैनेजर)</option>
+                    </select>
+                    <div class="invalid-feedback">कृपया पद का चयन करें (Please select a job role).</div>
+                  </div>
+
+                  <!-- Experience Level -->
+                  <div class="col-md-6">
+                    <label for="appExp" class="form-label fw-bold text-navy small">Experience / अनुभव <span class="text-danger">*</span></label>
+                    <select class="form-select py-2" id="appExp" name="experience" required>
+                      <option value="Fresher (No Experience)" selected>Fresher / कोई अनुभव नहीं (Freshers Welcome!)</option>
+                      <option value="Less than 1 Year">Less than 1 Year (1 साल से कम)</option>
+                      <option value="1 to 3 Years">1 to 3 Years (1 से 3 साल)</option>
+                      <option value="3+ Years">3+ Years (3 साल से अधिक)</option>
+                      <option value="Ex-Servicemen (Army / Police)">Ex-Servicemen (पूर्व सैनिक / पुलिस)</option>
+                    </select>
+                  </div>
+
+                  <!-- Current City / State -->
+                  <div class="col-md-6">
+                    <label for="appLocation" class="form-label fw-bold text-navy small">Current City / आपका शहर <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control py-2" id="appLocation" name="location" placeholder="e.g. Guwahati, Noida, Patna, Jaipur..." required>
+                    <div class="invalid-feedback">कृपया अपना शहर लिखें (Please enter city).</div>
+                  </div>
+
+                  <!-- Aadhaar / Photo Upload (Optional) -->
+                  <div class="col-md-6">
+                    <label for="appPhoto" class="form-label fw-bold text-navy small">Photo or Aadhaar / फोटो या आधार (Optional)</label>
+                    <input type="file" class="form-control py-2" id="appPhoto" name="photo" accept="image/*,.pdf">
+                    <small class="text-muted d-block mt-1">Optional: You can also bring it directly during interview.</small>
+                  </div>
+
+                  <!-- Additional Message -->
+                  <div class="col-12">
+                    <label for="appMessage" class="form-label fw-bold text-navy small">Message / अन्य जानकारी (Optional)</label>
+                    <textarea class="form-control" id="appMessage" name="message" rows="2" placeholder="Tell us if you have any preferred shift timing or city..."></textarea>
+                  </div>
+
+                  <!-- Submit Button -->
+                  <div class="col-12 pt-2">
+                    <button type="submit" class="btn-custom btn-custom-gold w-100 py-3 border-0">
+                      Submit Job Application / आवेदन जमा करें
+                      <svg class="btn-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                      </svg>
+                    </button>
+                  </div>
+
+                  <!-- Status Notification -->
+                  <div class="col-12">
+                    <div id="jobStatus" class="alert alert-success d-none mb-0" role="status" tabindex="-1">
+                      <strong><i class="bi bi-check-circle-fill me-2"></i>आवेदन सफलतापूर्वक दर्ज किया गया! (Application Received!)</strong><br>
+                      Our recruitment team will review your application and call you within 24 hours. You can also reach our recruitment desk directly on <a href="tel:+918453967564" class="alert-link fw-bold">+91-84539-67564</a>.
+                    </div>
+                  </div>
+
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Right: Verified Recruitment Desk (Mr. KK Ji Details Placeholder) -->
+          <div class="col-lg-5 reveal-up" style="--stagger-delay: 0.15s;">
+            <div class="officer-desk-card">
+              
+              <div class="d-flex align-items-center gap-3 mb-4">
+                <div class="officer-avatar-frame">
+                  <i class="bi bi-person-badge"></i>
+                </div>
+                <div>
+                  <span class="badge bg-gold text-navy-dark fw-bold px-2 py-1 small rounded-pill">
+                    OFFICIAL RECRUITMENT DESK
+                  </span>
+                  <h4 class="fw-bold mb-0 text-white mt-1">Mr. KK Ji</h4>
+                  <p class="text-white-50 small mb-0">Head of Recruitment &amp; Guard Enrolment</p>
+                </div>
+              </div>
+
+              <!-- Official 100% Free Guarantee -->
+              <div class="p-3 rounded-3 mb-4" style="background: rgba(255, 255, 255, 0.08); border-left: 3px solid var(--career-gold);">
+                <p class="small text-white-50 mb-0">
+                  <strong class="text-white">Official Notice:</strong> Recruitment is 100% free. Team Abhith Group never charges any registration fees from candidates.
+                  <br><span class="text-gold">अभियान पूरी तरह निशुल्क है। किसी को कोई पैसा न दें।</span>
+                </p>
+              </div>
+
+              <h5 class="fw-bold text-gold mb-3"><i class="bi bi-headset me-2"></i>Direct Recruitment Helpline</h5>
+              
+              <div class="desk-contact-item">
+                <div class="desk-contact-icon"><i class="bi bi-telephone-fill"></i></div>
+                <div class="desk-contact-text">
+                  <strong>Call HR Lines directly:</strong>
+                  <a href="tel:+918453967564">+91 84539 67564</a> &bull; <a href="tel:+917099300519">+91 70993 00519</a>
+                </div>
+              </div>
+
+              <div class="desk-contact-item">
+                <div class="desk-contact-icon wa"><i class="bi bi-whatsapp"></i></div>
+                <div class="desk-contact-text">
+                  <strong>WhatsApp Helpline (Chat Directly):</strong>
+                  <a href="https://wa.me/918453967564?text=Hello%20Team%20Abhith,%20I%20want%20to%20apply%20for%20a%20Job." target="_blank" rel="noopener">
+                    +91 84539 67564 (Click to Chat)
+                  </a>
+                </div>
+              </div>
+
+              <div class="desk-contact-item">
+                <div class="desk-contact-icon"><i class="bi bi-envelope-fill"></i></div>
+                <div class="desk-contact-text">
+                  <strong>Recruitment Email:</strong>
+                  <a href="mailto:recruitment.security@abhithgroup.com">recruitment.security@abhithgroup.com</a>
+                </div>
+              </div>
+
+              <div class="desk-contact-item mb-0">
+                <div class="desk-contact-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                <div class="desk-contact-text">
+                  <strong>Recruitment Center (Head Office):</strong>
+                  <span class="text-white-50 small d-block">
+                    16/34, FC Road, Near Income Tax Office, Uzanbazar, Guwahati – 781001, Assam.
+                  </span>
+                </div>
+              </div>
+
+              <div class="pt-3 mt-3 border-top border-secondary border-opacity-25 small text-white-50">
+                <i class="bi bi-clock me-1 text-gold"></i> Recruitment Office Timings: Mon – Sat (9:30 AM – 6:30 PM)
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Main Shared Layout Footer -->
+  <script>AbhithLayout.render('footer');</script>
+
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="assets/script.js"></script>
+  <script src="assets/pages.js"></script>
+
+  <!-- Careers Page Interactive Filtering & Form Pre-Select Script -->
+  <script>
+    let activeCategory = 'all';
+    let activeExp = 'all';
+    let activeLocation = 'all';
+    let activeChip = 'all';
+
+    function scrollToResults() {
+      const sec = document.getElementById('openings');
+      if (!sec) return;
+      const top = sec.getBoundingClientRect().top;
+      if (top > window.innerHeight * 0.4 || top < 0) {
+        window.scrollTo({ top: window.scrollY + top - 130, behavior: 'smooth' });
+      }
+    }
+
+    function filterAllJobs(jump) {
+      const searchVal = (document.getElementById('jobSearchInput').value || '').toLowerCase().trim();
+      activeCategory = document.getElementById('categoryFilter').value;
+      activeExp = document.getElementById('experienceFilter').value;
+      activeLocation = document.getElementById('locationFilter').value;
+
+      const cards = document.querySelectorAll('#jobGrid .luxury-job-card');
+      let visibleCount = 0;
+
+      cards.forEach(card => {
+        const category = card.getAttribute('data-category') || '';
+        const exp = card.getAttribute('data-exp') || '';
+        const role = card.getAttribute('data-role') || '';
+        const location = card.getAttribute('data-location') || '';
+        const searchData = card.getAttribute('data-search') || '';
+
+        // Match Keyword
+        const haystack = (searchData + ' ' + role + ' ' + card.querySelector('h3').textContent).toLowerCase();
+        const matchesKeyword = !searchVal || searchVal.split(/s+/).every(t => haystack.includes(t));
+
+        // Match Category
+        const matchesCat = (activeCategory === 'all') || (category === activeCategory);
+
+        // Match Exp
+        const matchesExp = (activeExp === 'all') || (exp === activeExp);
+
+        // Match Location
+        const matchesLoc = (activeLocation === 'all') || location.includes(activeLocation);
+
+        // Match Chip
+        let matchesChip = true;
+        if (activeChip === 'freshers') {
+          matchesChip = (exp === 'fresher');
+        } else if (activeChip !== 'all') {
+          matchesChip = (role === activeChip);
+        }
+
+        if (matchesKeyword && matchesCat && matchesExp && matchesLoc && matchesChip) {
+          card.style.display = 'flex';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      // Update Counter
+      const counter = document.getElementById('activeCount');
+      const noResults = document.getElementById('noResultsNotice');
+
+      if (jump) scrollToResults();
+
+      if (counter) {
+        counter.textContent = `Showing ${visibleCount} of 8 ${visibleCount === 1 ? 'opening' : 'openings'}`;
+      }
+
+      if (noResults) {
+        if (visibleCount === 0) {
+          noResults.classList.remove('d-none');
+        } else {
+          noResults.classList.add('d-none');
+        }
+      }
+    }
+
+    function selectChip(chipVal, jump) {
+      activeChip = chipVal;
+
+      // Update Chip UI active classes
+      document.querySelectorAll('.role-chip').forEach(btn => {
+        if (btn.getAttribute('data-chip') === chipVal) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+
+      filterAllJobs(jump !== false);
+    }
+
+    function clearSearch() {
+      document.getElementById('jobSearchInput').value = '';
+      filterAllJobs();
+    }
+
+    function resetAllFilters() {
+      document.getElementById('jobSearchInput').value = '';
+      document.getElementById('categoryFilter').value = 'all';
+      document.getElementById('experienceFilter').value = 'all';
+      document.getElementById('locationFilter').value = 'all';
+      selectChip('all', false);
+    }
+
+    // Smooth Scroll and Auto Pre-select Role in Application Form
+    function selectRoleAndApply(roleTitle) {
+      const roleSelect = document.getElementById('appRole');
+      if (roleSelect) {
+        for (let i = 0; i < roleSelect.options.length; i++) {
+          if (roleSelect.options[i].value === roleTitle || roleSelect.options[i].text.includes(roleTitle.split('–')[0].trim())) {
+            roleSelect.selectedIndex = i;
+            break;
+          }
+        }
+      }
+
+      const formSection = document.getElementById('apply');
+      if (formSection) {
+        formSection.scrollIntoView({ behavior: 'smooth' });
+      }
+
+      // Highlight form card
+      const formCard = document.getElementById('applyFormCard');
+      if (formCard) {
+        formCard.style.boxShadow = '0 0 0 4px rgba(229, 169, 59, 0.4), 0 20px 45px rgba(1, 27, 64, 0.15)';
+        setTimeout(() => {
+          formCard.style.boxShadow = '';
+        }, 2500);
+      }
+    }
+
+    // Form Submission
+    function handleJobSubmit(e) {
+      e.preventDefault();
+      const form = document.getElementById('jobApplicationForm');
+      if (!form.checkValidity()) {
+        e.stopPropagation();
+        form.classList.add('was-validated');
+        return;
+      }
+
+      const statusEl = document.getElementById('jobStatus');
+      if (statusEl) {
+        statusEl.classList.remove('d-none');
+        statusEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+
+      form.reset();
+      form.classList.remove('was-validated');
+    }
+  </script>
+
+</body>
+
+</html>
