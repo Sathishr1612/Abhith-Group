@@ -1535,7 +1535,7 @@ html {
   right: 20px;
 }
 
-.modal-backdrop.show {
+.pg-lightbox-modal ~ .modal-backdrop.show {
   opacity: 0.9;
 }
 
@@ -3962,3 +3962,199 @@ a.corporate-service-card {
     background-position: center var(--header-h, 80px) !important;
   }
 }
+
+/* ==========================================================================
+   HEADER BUTTONS RESPONSIVE SYSTEM & SIMPLE JOB MODAL
+   ========================================================================== */
+
+/* Header Apply Now Button */
+.btn-custom-apply {
+  background: var(--navy, #011B40);
+  color: var(--gold, #E9BF69) !important;
+  border: 1.5px solid var(--gold, #E9BF69);
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  font-size: 0.84rem;
+  padding: 10px 18px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  white-space: nowrap;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(1, 27, 64, 0.2);
+}
+
+.btn-custom-apply:hover {
+  background: var(--gold, #E9BF69);
+  color: var(--navy, #011B40) !important;
+  border-color: var(--gold, #E9BF69);
+  box-shadow: 0 6px 20px rgba(233, 191, 105, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn-custom-apply:focus-visible {
+  outline: 2px solid var(--gold, #E9BF69);
+  outline-offset: 2px;
+}
+
+/* Header Responsive Alignment for CTA Group */
+.header-cta-group {
+  flex-shrink: 0;
+}
+
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .header-cta-group {
+    gap: 8px !important;
+  }
+  .header-cta-group .btn-custom {
+    padding: 10px 16px !important;
+    font-size: 0.8rem !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .header-cta-group {
+    gap: 6px !important;
+  }
+  .header-cta-group .btn-custom {
+    padding: 8px 10px !important;
+    font-size: 0.74rem !important;
+    letter-spacing: 0 !important;
+  }
+  .header-cta-group .btn-arrow-icon {
+    display: none !important;
+  }
+}
+
+/* Mobile Header Top Apply Button */
+.mobile-top-apply-btn {
+  padding: 6px 12px !important;
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.02em !important;
+  border-radius: 4px !important;
+  white-space: nowrap !important;
+}
+
+@media (max-width: 420px) {
+  .mobile-top-apply-btn {
+    padding: 5px 8px !important;
+    font-size: 0.7rem !important;
+  }
+  .mobile-top-apply-btn i {
+    display: none !important;
+  }
+}
+
+/* Inside Mobile Collapsed Menu: Both Buttons Full-Width & Stacked */
+@media (max-width: 991.98px) {
+  .header-cta-group {
+    width: 100% !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    margin-top: 16px !important;
+    padding-top: 16px !important;
+    border-top: 1px solid rgba(1, 27, 64, 0.08) !important;
+  }
+  .header-cta-group .btn-custom {
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 12px 18px !important;
+    font-size: 0.88rem !important;
+    display: inline-flex !important;
+  }
+}
+
+/* Simple Job Application Modal System */
+.job-apply-modal {
+  z-index: 1070 !important;
+}
+
+/* Translucent Soft Backdrop so background website remains clearly visible */
+.modal-backdrop {
+  z-index: 1065 !important;
+  background-color: rgba(1, 27, 64, 0.22) !important;
+  backdrop-filter: blur(3px) !important;
+  -webkit-backdrop-filter: blur(3px) !important;
+  transition: opacity 0.25s ease !important;
+}
+
+.modal-backdrop.fade {
+  opacity: 0 !important;
+}
+
+.modal-backdrop.show {
+  opacity: 1 !important;
+}
+
+.job-apply-modal .modal-content {
+  border: 1px solid rgba(233, 191, 105, 0.45) !important;
+  box-shadow: 0 25px 60px rgba(1, 27, 64, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.2) !important;
+  border-radius: 16px !important;
+}
+
+.job-modal-header {
+  background: linear-gradient(135deg, #011B40 0%, #06234D 100%);
+  color: #FFFFFF;
+  border-bottom: 2px solid var(--gold, #E9BF69);
+}
+
+.job-modal-icon-frame-sm {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: rgba(233, 191, 105, 0.16);
+  border: 1px solid rgba(233, 191, 105, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  flex-shrink: 0;
+}
+
+.job-apply-modal .form-control,
+.job-apply-modal .form-select {
+  border: 1.5px solid rgba(1, 27, 64, 0.14);
+  border-radius: 8px;
+  font-size: 0.88rem;
+  color: var(--navy, #011B40);
+  background-color: #FBFBFD;
+  transition: all 0.2s ease;
+}
+
+.job-apply-modal .form-control:focus,
+.job-apply-modal .form-select:focus {
+  border-color: var(--gold, #E9BF69);
+  background-color: #FFFFFF;
+  box-shadow: 0 0 0 3px rgba(233, 191, 105, 0.2);
+}
+
+.job-success-card {
+  background: linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 100%);
+  border: 1.5px solid #86EFAC;
+}
+
+.job-success-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #16A34A;
+  color: #FFFFFF;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7rem;
+  box-shadow: 0 4px 14px rgba(22, 163, 74, 0.25);
+}
+
+.text-gold-dark {
+  color: #C98A20;
+}
+

@@ -85,11 +85,17 @@
           <img src="assets/images/branding/abhith-manpower-services-logo.png" alt="Abhith Manpower Services Pvt. Ltd." class="header-logo-img">
         </a>
 
-        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
-          data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        <!-- Mobile Quick Apply + Hamburger Toggler -->
+        <div class="d-flex align-items-center d-lg-none gap-2">
+          <button type="button" class="btn-custom btn-custom-apply btn-sm py-2 px-3" data-bs-toggle="modal" data-bs-target="#jobApplyModal" aria-label="Apply for Job">
+            <i class="bi bi-briefcase-fill me-1"></i> APPLY NOW
+          </button>
+          <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
 
         <div class="collapse navbar-collapse" id="navbarContent">
           <ul class="navbar-menu navbar-nav mx-auto mb-2 mb-lg-0 align-items-lg-center">
@@ -148,9 +154,7 @@
             <li class="nav-item">
               <a class="nav-link-custom nav-link${active('gallery')}" href="gallery.html">Gallery</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link-custom nav-link${active('careers')}" href="careers.html">Careers</a>
-            </li>
+        
             <li class="nav-item">
               <a class="nav-link-custom nav-link" href="index.html#testimonials">Testimonials</a>
             </li>
@@ -159,7 +163,10 @@
             </li>
           </ul>
 
-          <div class="d-flex align-items-center gap-3 ms-lg-3 mt-3 mt-lg-0">
+          <div class="header-cta-group d-flex align-items-center gap-2 gap-xl-3 ms-lg-3 mt-3 mt-lg-0">
+            <button type="button" class="btn-custom btn-custom-apply header-apply-btn w-100 w-lg-auto" data-bs-toggle="modal" data-bs-target="#jobApplyModal" id="headerApplyBtn">
+              <i class="bi bi-briefcase-fill me-1"></i> APPLY NOW
+            </button>
             <a href="contact.html#enquiry" class="btn-custom btn-custom-gold w-100 w-lg-auto">
               REQUEST A QUOTE
               ${arrowSvg}
@@ -169,7 +176,8 @@
 
       </div>
     </nav>
-  </header>`;
+  </header>
+  ${jobModal()}`;
   }
 
   function footer() {
@@ -231,7 +239,6 @@
             ${link('facility-management.html', 'Facility Management')}
             ${link('industries-projects.html', 'Industries &amp; Projects')}
             ${link('gallery.html', 'Gallery')}
-            ${link('careers.html', 'Careers &amp; Jobs')}
             ${link('contact.html', 'Contact Us')}
           </ul>
         </div>
@@ -294,6 +301,127 @@
   </footer>`;
   }
 
+  function jobModal() {
+    return `
+  <!-- Simple Job Application Popup Modal -->
+  <div class="modal fade job-apply-modal" id="jobApplyModal" tabindex="-1" aria-labelledby="jobApplyModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" style="max-width: 500px;">
+      <div class="modal-content shadow-lg border-0 rounded-4 overflow-hidden">
+        
+        <!-- Header -->
+        <div class="modal-header job-modal-header py-3 px-4 d-flex align-items-center justify-content-between">
+          <div class="d-flex align-items-center gap-2">
+            <div class="job-modal-icon-frame-sm">
+              <i class="bi bi-person-badge-fill text-gold"></i>
+            </div>
+            <div>
+              <h5 class="modal-title fw-bold text-white mb-0" id="jobApplyModalLabel">
+                Apply for Job &bull; नौकरी हेतु आवेदन
+              </h5>
+              <p class="text-white-50 small mb-0" style="font-size: 0.76rem;">Abhith Manpower Services Pvt. Ltd.</p>
+            </div>
+          </div>
+          <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <!-- Body -->
+        <div class="modal-body p-4 bg-white">
+          
+          <!-- Success Alert Card -->
+          <div id="modalJobAlert" class="job-success-card d-none text-center p-4 rounded-3">
+            <div class="job-success-icon mb-2"><i class="bi bi-check-lg"></i></div>
+            <h5 class="fw-bold text-navy mb-1">आवेदन सफलतापूर्वक जमा हुआ!</h5>
+            <p class="text-success fw-bold small mb-2">Application Submitted Successfully!</p>
+            <div class="p-2 px-3 bg-white rounded-3 border d-inline-block small text-navy mb-3">
+              Reference ID: <strong id="modalJobRefId" class="text-gold-dark">ABH-000000</strong>
+            </div>
+            <p class="small text-muted mb-3">Our recruitment team will review your application and contact you soon.<br><span class="text-navy">हमारी टीम आपसे जल्द संपर्क करेगी।</span></p>
+            <button type="button" class="btn-custom btn-custom-gold btn-sm px-4 py-2 border-0" data-bs-dismiss="modal">
+              OK / बंद करें
+            </button>
+          </div>
+
+          <!-- Simple 5-field Form -->
+          <form id="headerJobApplyForm" class="needs-validation" novalidate onsubmit="window.handleHeaderJobSubmit(event)">
+            <div class="row g-3">
+              
+              <!-- Full Name -->
+              <div class="col-12">
+                <label for="mJobName" class="form-label fw-bold text-navy small mb-1">
+                  Full Name / पूरा नाम <span class="text-danger">*</span>
+                </label>
+                <input type="text" class="form-control py-2" id="mJobName" name="name" placeholder="e.g. Ramesh Kumar" required>
+                <div class="invalid-feedback">कृपया अपना नाम लिखें (Enter full name).</div>
+              </div>
+
+              <!-- Phone Number -->
+              <div class="col-12">
+                <label for="mJobPhone" class="form-label fw-bold text-navy small mb-1">
+                  Phone Number / मोबाइल नंबर <span class="text-danger">*</span>
+                </label>
+                <input type="tel" class="form-control py-2" id="mJobPhone" name="phone" placeholder="10-digit number e.g. 9876543210" pattern="[0-9]{10}" required>
+                <div class="invalid-feedback">कृपया 10 अंकों का मोबाइल नंबर डालें (10-digit number).</div>
+              </div>
+
+              <!-- Job Role -->
+              <div class="col-md-6">
+                <label for="mJobRole" class="form-label fw-bold text-navy small mb-1">
+                  Job Role / पद चुनें <span class="text-danger">*</span>
+                </label>
+                <select class="form-select py-2" id="mJobRole" name="role" required>
+                  <option value="" selected disabled>Select Role / पद चुनें</option>
+                  <option value="Security Guard">Security Guard (सुरक्षा गार्ड)</option>
+                  <option value="Gunman / PSO">Armed Gunman / PSO (गनमैन)</option>
+                  <option value="Bouncer">Bouncer &amp; Bodyguard (बाउंसर)</option>
+                  <option value="Security Supervisor">Security Supervisor (सुपरवाइजर)</option>
+                  <option value="Housekeeper">Housekeeper (हाउसकीपिंग)</option>
+                  <option value="Janitor / Cleaner">Janitorial Cleaner (सफाई कर्मचारी)</option>
+                  <option value="Driver">Driver (ड्राइवर)</option>
+                  <option value="Building Manager">Building Manager (बिल्डिंग मैनेजर)</option>
+                  <option value="Other">Other (अन्य पद)</option>
+                </select>
+                <div class="invalid-feedback">कृपया पद चुनें (Select role).</div>
+              </div>
+
+              <!-- Experience -->
+              <div class="col-md-6">
+                <label for="mJobExp" class="form-label fw-bold text-navy small mb-1">
+                  Experience / अनुभव <span class="text-danger">*</span>
+                </label>
+                <select class="form-select py-2" id="mJobExp" name="experience" required>
+                  <option value="Fresher" selected>Fresher (कोई अनुभव नहीं)</option>
+                  <option value="Less than 1 Year">Less than 1 Year (1 साल से कम)</option>
+                  <option value="1 to 3 Years">1 to 3 Years (1 से 3 साल)</option>
+                  <option value="3+ Years">3+ Years (3 साल से अधिक)</option>
+                  <option value="Ex-Servicemen">Ex-Servicemen (पूर्व सैनिक)</option>
+                </select>
+              </div>
+
+              <!-- Current City -->
+              <div class="col-12">
+                <label for="mJobCity" class="form-label fw-bold text-navy small mb-1">
+                  City / Location / आपका शहर <span class="text-danger">*</span>
+                </label>
+                <input type="text" class="form-control py-2" id="mJobCity" name="city" placeholder="e.g. Guwahati, Noida, Delhi NCR, Jaipur..." required>
+                <div class="invalid-feedback">कृपया अपना शहर लिखें (Enter city).</div>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="col-12 pt-2">
+                <button type="submit" id="mJobSubmitBtn" class="btn-custom btn-custom-gold w-100 py-2 border-0 fw-bold">
+                  SUBMIT APPLICATION / आवेदन जमा करें
+                </button>
+              </div>
+
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>`;
+  }
+
   window.AbhithLayout = {
     contact: CONTACT,
     render(part) {
@@ -315,4 +443,105 @@
     if ('ResizeObserver' in window) new ResizeObserver(update).observe(el);
     window.addEventListener('load', update);
   }
+
+  // Global helper to open the Job Application modal programmatically or pre-select role
+  window.openJobApplyModal = function (roleName) {
+    const modalEl = document.getElementById('jobApplyModal');
+    if (!modalEl) return;
+
+    if (roleName) {
+      const roleSelect = document.getElementById('mJobRole');
+      if (roleSelect) {
+        for (let i = 0; i < roleSelect.options.length; i++) {
+          if (roleSelect.options[i].value === roleName || roleSelect.options[i].text.toLowerCase().includes(roleName.split('–')[0].trim().toLowerCase())) {
+            roleSelect.selectedIndex = i;
+            break;
+          }
+        }
+      }
+    }
+
+    if (window.bootstrap && window.bootstrap.Modal) {
+      const inst = window.bootstrap.Modal.getOrCreateInstance(modalEl);
+      inst.show();
+    } else {
+      modalEl.classList.add('show');
+      modalEl.style.display = 'block';
+      document.body.classList.add('modal-open');
+    }
+  };
+
+  // Global handler for simple job application form submission
+  window.handleHeaderJobSubmit = function (e) {
+    e.preventDefault();
+    const form = document.getElementById('headerJobApplyForm');
+    if (!form) return;
+
+    if (!form.checkValidity()) {
+      e.stopPropagation();
+      form.classList.add('was-validated');
+      return;
+    }
+
+    const name = form.elements['name'] ? form.elements['name'].value.trim() : '';
+    const phone = form.elements['phone'] ? form.elements['phone'].value.trim() : '';
+    const role = form.elements['role'] ? form.elements['role'].value : '';
+    const exp = form.elements['experience'] ? form.elements['experience'].value : '';
+    const city = form.elements['city'] ? form.elements['city'].value.trim() : '';
+
+    const refId = 'ABH-' + Math.floor(100000 + Math.random() * 900000);
+
+    // Save to localStorage for record keeping
+    try {
+      const records = JSON.parse(localStorage.getItem('abhith_job_applications') || '[]');
+      records.push({
+        refId,
+        name,
+        phone,
+        role,
+        exp,
+        city,
+        date: new Date().toISOString()
+      });
+      localStorage.setItem('abhith_job_applications', JSON.stringify(records));
+    } catch (err) {
+      console.warn('Storage error:', err);
+    }
+
+    // Set Ref ID in modal
+    const refEl = document.getElementById('modalJobRefId');
+    if (refEl) refEl.textContent = refId;
+
+    // Show Success Alert & Hide Form
+    const alertBox = document.getElementById('modalJobAlert');
+    if (alertBox) alertBox.classList.remove('d-none');
+    form.classList.add('d-none');
+    form.reset();
+    form.classList.remove('was-validated');
+  };
+
+  // Wire fallback reset listener on modal close
+  document.addEventListener('DOMContentLoaded', function () {
+    const modalEl = document.getElementById('jobApplyModal');
+    if (modalEl) {
+      modalEl.addEventListener('hidden.bs.modal', function () {
+        const alertBox = document.getElementById('modalJobAlert');
+        const form = document.getElementById('headerJobApplyForm');
+        if (alertBox) alertBox.classList.add('d-none');
+        if (form) {
+          form.classList.remove('d-none');
+          form.classList.remove('was-validated');
+        }
+      });
+    }
+
+    // Fallback click listener for buttons targeting #jobApplyModal
+    document.addEventListener('click', function (e) {
+      const btn = e.target.closest('[data-bs-target="#jobApplyModal"], #headerApplyBtn');
+      if (btn && (!window.bootstrap || !window.bootstrap.Modal)) {
+        e.preventDefault();
+        window.openJobApplyModal();
+      }
+    });
+  });
 })();
