@@ -617,9 +617,8 @@ html {
   position: absolute;
   inset: 0;
   z-index: -2;
-  background: url('images/office/abhith-office-operations-room-staff.jpeg') 70% 68% / cover no-repeat;
-  filter: grayscale(0.35) contrast(1.05);
-  opacity: 0.6;
+  background: url('images/security/abhith-security-guards-team-lobby.jpg') 75% 20% / cover no-repeat;
+  opacity: 0.85;
   pointer-events: none;
 }
 
