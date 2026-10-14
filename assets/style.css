@@ -2471,14 +2471,14 @@ html { overflow-x: clip; }
 .card-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 60%, rgba(1, 27, 64, 0.35) 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 55%, rgba(1, 27, 64, 0.55) 100%);
   transition: opacity 0.35s ease;
   pointer-events: none;
 }
 
 .card-accent-pill {
   position: absolute;
-  top: 14px;
+  bottom: 14px;
   left: 14px;
   background: rgba(1, 27, 64, 0.85);
   backdrop-filter: blur(8px);
