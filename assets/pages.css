@@ -617,7 +617,7 @@ html {
   position: absolute;
   inset: 0;
   z-index: -2;
-  background: url('images/security/abhith-security-guards-team-lobby.jpg') 75% 20% / cover no-repeat;
+  background: url('images/security/abhith-security-guards-team-lobby.webp') 75% 20% / cover no-repeat;
   opacity: 0.85;
   pointer-events: none;
 }
@@ -1464,6 +1464,15 @@ html {
 }
 
 /* --- Lightbox (Bootstrap modal) --- */
+/* Sit above the global .modal-backdrop (z-index 1065) so the image isn't blurred */
+.pg-lightbox {
+  z-index: 1075 !important;
+}
+
+body:has(.pg-lightbox.show) .modal-backdrop.show {
+  background-color: rgba(1, 15, 36, 0.88) !important;
+}
+
 .pg-lightbox .modal-content {
   background: transparent;
   border: none;
@@ -2295,7 +2304,7 @@ a.corporate-service-card {
     linear-gradient(180deg,
       rgba(3, 14, 40, 0.42) 0%,
       rgba(2, 9, 28, 0.65) 100%),
-    url('./images/journey-bg.jpg') center center / cover no-repeat;
+    url('./images/abstract-blue-gold-wave-background.webp') center center / cover no-repeat;
 
   /* Luxury gold & ambient blue border rim */
   border: 1px solid rgba(233, 191, 105, 0.38);

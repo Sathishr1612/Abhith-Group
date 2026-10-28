@@ -82,7 +82,7 @@
       <div class="container-fluid px-lg-5">
 
         <a class="navbar-brand me-4" href="index.html">
-          <img src="assets/images/branding/abhith-manpower-services-logo.png" alt="Abhith Manpower Services Pvt. Ltd." class="header-logo-img">
+          <img src="assets/images/branding/abhith-manpower-services-logo.webp" alt="Abhith Manpower Services Pvt. Ltd." class="header-logo-img">
         </a>
 
         <!-- Mobile Quick Apply + Hamburger Toggler -->
@@ -217,7 +217,7 @@
         <!-- Col 1: Brand & Statement -->
         <div class="col-lg-4 col-md-6">
           <div class="footer-logo-box mb-3">
-            <a href="index.html"><img src="assets/images/branding/abhith-manpower-services-logo.png" alt="Abhith Manpower Services Pvt. Ltd." class="footer-logo-img"></a>
+            <a href="index.html"><img src="assets/images/branding/abhith-manpower-services-logo.webp" alt="Abhith Manpower Services Pvt. Ltd." class="footer-logo-img"></a>
           </div>
           <p class="footer-brand-desc mb-3">
             Abhith Manpower Services Pvt. Ltd. provides professional security, manpower, housekeeping and facility
